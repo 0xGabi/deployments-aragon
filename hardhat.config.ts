@@ -1,15 +1,28 @@
 import 'dotenv/config';
 import {HardhatUserConfig} from 'hardhat/types';
-import 'hardhat-deploy';
+
 import '@nomiclabs/hardhat-ethers';
-import 'hardhat-gas-reporter';
+import '@tenderly/hardhat-tenderly';
 import '@typechain/hardhat';
+import 'hardhat-deploy';
+import 'hardhat-gas-reporter';
 import 'solidity-coverage';
+
 import {node_url, accounts} from './utils/network';
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.7.6',
+    compilers: [
+      {
+        version: '0.4.24',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 10000,
+          },
+        },
+      },
+    ],
   },
   namedAccounts: {
     deployer: 0,
@@ -57,9 +70,14 @@ const config: HardhatUserConfig = {
       url: node_url('goerli'),
       accounts: accounts('goerli'),
     },
-  },
-  paths: {
-    sources: 'src',
+    matic: {
+      url: 'https://rpc-mainnet.maticvigil.com/',
+      gasPrice: 1000000000,
+    },
+    frame: {
+      url: 'http://localhost:1248',
+      httpHeaders: {origin: 'hardhat'},
+    },
   },
   gasReporter: {
     currency: 'USD',
