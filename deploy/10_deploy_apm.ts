@@ -9,7 +9,7 @@ import {
 } from '../typechain';
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-  const {deployments, getNamedAccounts, ethers} = hre;
+  const {deployments, ethers, getNamedAccounts} = hre;
   const {deploy, execute, get, log} = deployments;
 
   const {deployer} = await getNamedAccounts();
@@ -46,7 +46,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('ENS:', ensAddress);
 
   // Deploy APMRegistryFactory
-  const apmFactory = await deploy('APMRegistryFactory', {
+  const apmFactory = {
+    address: '0xb8c830ACebD05537dDDbc45F568aADc5a7cd952D',
+  };
+  await deploy('APMRegistryFactory', {
     from: deployer,
     args: [
       daoFactory.address,
@@ -60,14 +63,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     deterministicDeployment: true,
   });
 
-  // Creating subdomain and assigning it to APMRegistryFactory
+  log('Creating subdomain and assigning it to APMRegistryFactory');
   const ens = (await ethers.getContractAt('ENS', ensAddress)) as ENS;
   await ens.setSubnodeOwner(tldHash, labelHash, apmFactory.address);
 
   // New APM instance
   const {events} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 5000000},
+    {from: deployer, log: true, gasLimit: 8000000},
     'newAPM',
     tldHash,
     labelHash,
@@ -95,20 +98,22 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     registrar
   )) as ENSSubdomainRegistrar;
 
-  // Create permission for root account on CREATE_NAME_ROLE
+  log('Create permission for root account on CREATE_NAME_ROLE');
   await acl.grantPermission(
     deployer,
     registrar,
     await ensSubdomainRegistrar.CREATE_NAME_ROLE()
   );
 
-  // Creating open subdomain and assigning it to APMRegistryFactory
-  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address);
+  log('Creating open subdomain and assigning it to APMRegistryFactory');
+  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
+    gasLimit: 8000000,
+  });
 
   // New Open APM instance
   const {events: newApmEvents} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 5000000},
+    {from: deployer, log: true, gasLimit: 8000000},
     'newAPM',
     openTldHash,
     openLabelHash,
