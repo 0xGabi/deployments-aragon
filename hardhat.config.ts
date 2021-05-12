@@ -70,7 +70,7 @@ const config: HardhatUserConfig = {
       url: node_url('goerli'),
       accounts: accounts('goerli'),
     },
-    matic: {
+    polygon: {
       url: 'https://rpc-mainnet.maticvigil.com/',
       gasPrice: 1000000000,
     },

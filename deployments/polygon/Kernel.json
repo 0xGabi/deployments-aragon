@@ -1,0 +1,833 @@
+{
+  "address": "0x47c980A62bA89F738A668ED1709Ca5fef2384F21",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "hasInitialized",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "KERNEL_APP_ID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "APP_ADDR_NAMESPACE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRecoveryVault",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appBase",
+          "type": "address"
+        },
+        {
+          "name": "_initializePayload",
+          "type": "bytes"
+        },
+        {
+          "name": "_setDefault",
+          "type": "bool"
+        }
+      ],
+      "name": "newAppInstance",
+      "outputs": [
+        {
+          "name": "appProxy",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "apps",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_baseAcl",
+          "type": "address"
+        },
+        {
+          "name": "_permissionsCreator",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "CORE_NAMESPACE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "allowRecoverability",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appBase",
+          "type": "address"
+        }
+      ],
+      "name": "newAppInstance",
+      "outputs": [
+        {
+          "name": "appProxy",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recoveryVaultAppId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getInitializationBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_recoveryVaultAppId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setRecoveryVaultAppId",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "APP_MANAGER_ROLE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appBase",
+          "type": "address"
+        }
+      ],
+      "name": "newPinnedAppInstance",
+      "outputs": [
+        {
+          "name": "appProxy",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "transferToVault",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_namespace",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_app",
+          "type": "address"
+        }
+      ],
+      "name": "setApp",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_namespace",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getApp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_appBase",
+          "type": "address"
+        },
+        {
+          "name": "_initializePayload",
+          "type": "bytes"
+        },
+        {
+          "name": "_setDefault",
+          "type": "bool"
+        }
+      ],
+      "name": "newPinnedAppInstance",
+      "outputs": [
+        {
+          "name": "appProxy",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_kernel",
+          "type": "address"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_initializePayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "newAppProxyPinned",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "APP_BASES_NAMESPACE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "acl",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPetrified",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_kernel",
+          "type": "address"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "newAppProxy",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "DEFAULT_ACL_APP_ID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_kernel",
+          "type": "address"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_initializePayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "newAppProxy",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_who",
+          "type": "address"
+        },
+        {
+          "name": "_where",
+          "type": "address"
+        },
+        {
+          "name": "_what",
+          "type": "bytes32"
+        },
+        {
+          "name": "_how",
+          "type": "bytes"
+        }
+      ],
+      "name": "hasPermission",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_kernel",
+          "type": "address"
+        },
+        {
+          "name": "_appId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "newAppProxyPinned",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_shouldPetrify",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "proxy",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "isUpgradeable",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "appId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NewAppProxy",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "vault",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RecoverToVault",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "namespace",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "name": "appId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "app",
+          "type": "address"
+        }
+      ],
+      "name": "SetApp",
+      "type": "event"
+    }
+  ],
+  "transactionHash": "0x327d2ac25fc557dda35e0f72f4e90024441cdfda00a410f9c75093c1114dfaa9",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB24b54FE5a3ADcB4cb3B27d31B6C7f7E9F6A73a7",
+    "contractAddress": null,
+    "transactionIndex": 1,
+    "gasUsed": "2672363",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000001008000000000000000000000000000000008000000000000000000000000080000008008000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000040200000000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x8acca57dd2661fc05713d0de2e4eb3248a0ac2637a2bef622b86f385ba560639",
+    "transactionHash": "0x327d2ac25fc557dda35e0f72f4e90024441cdfda00a410f9c75093c1114dfaa9",
+    "logs": [
+      {
+        "transactionIndex": 1,
+        "blockNumber": 14306236,
+        "transactionHash": "0x327d2ac25fc557dda35e0f72f4e90024441cdfda00a410f9c75093c1114dfaa9",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000b24b54fe5a3adcb4cb3b27d31b6c7f7e9f6a73a7",
+          "0x0000000000000000000000004f856f79f54592a48c8a1a1fafa1b0a3ac053f99"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000025f9fffd4db80000000000000000000000000000000000000000000000000029a2241af62c00000000000000000000000000000000000000000000000000a5a69f4f2393213820000000000000000000000000000000000000000000000000297c2a1af8de48000000000000000000000000000000000000000000000000a5a6c54923906ef020",
+        "logIndex": 2,
+        "blockHash": "0x8acca57dd2661fc05713d0de2e4eb3248a0ac2637a2bef622b86f385ba560639"
+      }
+    ],
+    "blockNumber": 14306236,
+    "cumulativeGasUsed": "2719135",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    true
+  ],
+  "solcInputHash": "635d22341e808aa0fa87d204ded34dfa",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"hasInitialized\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"KERNEL_APP_ID\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"APP_ADDR_NAMESPACE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getRecoveryVault\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_appBase\",\"type\":\"address\"},{\"name\":\"_initializePayload\",\"type\":\"bytes\"},{\"name\":\"_setDefault\",\"type\":\"bool\"}],\"name\":\"newAppInstance\",\"outputs\":[{\"name\":\"appProxy\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\"},{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"apps\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_baseAcl\",\"type\":\"address\"},{\"name\":\"_permissionsCreator\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CORE_NAMESPACE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"}],\"name\":\"allowRecoverability\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_appBase\",\"type\":\"address\"}],\"name\":\"newAppInstance\",\"outputs\":[{\"name\":\"appProxy\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recoveryVaultAppId\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getInitializationBlock\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_recoveryVaultAppId\",\"type\":\"bytes32\"}],\"name\":\"setRecoveryVaultAppId\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"APP_MANAGER_ROLE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_appBase\",\"type\":\"address\"}],\"name\":\"newPinnedAppInstance\",\"outputs\":[{\"name\":\"appProxy\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"transferToVault\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_namespace\",\"type\":\"bytes32\"},{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_app\",\"type\":\"address\"}],\"name\":\"setApp\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_namespace\",\"type\":\"bytes32\"},{\"name\":\"_appId\",\"type\":\"bytes32\"}],\"name\":\"getApp\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_appBase\",\"type\":\"address\"},{\"name\":\"_initializePayload\",\"type\":\"bytes\"},{\"name\":\"_setDefault\",\"type\":\"bool\"}],\"name\":\"newPinnedAppInstance\",\"outputs\":[{\"name\":\"appProxy\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_kernel\",\"type\":\"address\"},{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_initializePayload\",\"type\":\"bytes\"}],\"name\":\"newAppProxyPinned\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"APP_BASES_NAMESPACE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"acl\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isPetrified\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_kernel\",\"type\":\"address\"},{\"name\":\"_appId\",\"type\":\"bytes32\"}],\"name\":\"newAppProxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"DEFAULT_ACL_APP_ID\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_kernel\",\"type\":\"address\"},{\"name\":\"_appId\",\"type\":\"bytes32\"},{\"name\":\"_initializePayload\",\"type\":\"bytes\"}],\"name\":\"newAppProxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_who\",\"type\":\"address\"},{\"name\":\"_where\",\"type\":\"address\"},{\"name\":\"_what\",\"type\":\"bytes32\"},{\"name\":\"_how\",\"type\":\"bytes\"}],\"name\":\"hasPermission\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_kernel\",\"type\":\"address\"},{\"name\":\"_appId\",\"type\":\"bytes32\"}],\"name\":\"newAppProxyPinned\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_shouldPetrify\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"proxy\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"isUpgradeable\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"appId\",\"type\":\"bytes32\"}],\"name\":\"NewAppProxy\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"vault\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RecoverToVault\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"namespace\",\"type\":\"bytes32\"},{\"indexed\":true,\"name\":\"appId\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"app\",\"type\":\"address\"}],\"name\":\"SetApp\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"acl()\":{\"details\":\"Get the installed ACL app\",\"return\":\"ACL app\"},\"allowRecoverability(address)\":{\"details\":\"By default deriving from AragonApp makes it recoverable\",\"params\":{\"token\":\"Token address that would be recovered\"},\"return\":\"bool whether the app allows the recovery\"},\"getApp(bytes32,bytes32)\":{\"details\":\"Get the address of an app instance or base implementation\",\"params\":{\"_appId\":\"Identifier for app\",\"_namespace\":\"App namespace to use\"},\"return\":\"Address of the app\"},\"getInitializationBlock()\":{\"return\":\"Block number in which the contract was initialized\"},\"getRecoveryVault()\":{\"details\":\"Get the address of the recovery Vault instance (to recover funds)\",\"return\":\"Address of the Vault\"},\"hasInitialized()\":{\"return\":\"Whether the contract has been initialized by the time of the current block\"},\"hasPermission(address,address,bytes32,bytes)\":{\"details\":\"Function called by apps to check ACL on kernel or to check permission status\",\"params\":{\"_how\":\"Extra data for ACL auth\",\"_what\":\"Identifier for a group of actions in app\",\"_where\":\"Address of the app\",\"_who\":\"Sender of the original call\"},\"return\":\"Boolean indicating whether the ACL allows the role or not.        Always returns false if the kernel hasn't been initialized yet.\"},\"initialize(address,address)\":{\"details\":\"Initialize can only be called once. It saves the block number in which it was initialized.\",\"params\":{\"_baseAcl\":\"Address of base ACL app\",\"_permissionsCreator\":\"Entity that will be given permission over createPermission\"}},\"newAppInstance(bytes32,address)\":{\"details\":\"Create a new instance of an app linked to this kernel\",\"params\":{\"_appBase\":\"Address of the app's base implementation\",\"_appId\":\"Identifier for app\"},\"return\":\"AppProxy instance\"},\"newAppInstance(bytes32,address,bytes,bool)\":{\"details\":\"Create a new instance of an app linked to this kernel and set its base     implementation if it was not already set\",\"params\":{\"_appBase\":\"Address of the app's base implementation\",\"_appId\":\"Identifier for app\",\"_initializePayload\":\"Payload for call made by the proxy during its construction to initialize\",\"_setDefault\":\"Whether the app proxy app is the default one.       Useful when the Kernel needs to know of an instance of a particular app,       like Vault for escape hatch mechanism.\"},\"return\":\"AppProxy instance\"},\"newAppProxy(address,bytes32)\":{\"params\":{\"_appId\":\"Identifier for app\",\"_kernel\":\"App's Kernel reference\"},\"return\":\"AppProxyUpgradeable\"},\"newAppProxy(address,bytes32,bytes)\":{\"params\":{\"_appId\":\"Identifier for app\",\"_kernel\":\"App's Kernel reference\"},\"return\":\"AppProxyUpgradeable\"},\"newAppProxyPinned(address,bytes32)\":{\"params\":{\"_appId\":\"Identifier for app\",\"_kernel\":\"App's Kernel reference\"},\"return\":\"AppProxyPinned\"},\"newAppProxyPinned(address,bytes32,bytes)\":{\"params\":{\"_appId\":\"Identifier for app\",\"_initializePayload\":\"Proxy initialization payload\",\"_kernel\":\"App's Kernel reference\"},\"return\":\"AppProxyPinned\"},\"newPinnedAppInstance(bytes32,address)\":{\"details\":\"Create a new pinned instance of an app linked to this kernel\",\"params\":{\"_appBase\":\"Address of the app's base implementation\",\"_appId\":\"Identifier for app\"},\"return\":\"AppProxy instance\"},\"newPinnedAppInstance(bytes32,address,bytes,bool)\":{\"details\":\"Create a new pinned instance of an app linked to this kernel and set     its base implementation if it was not already set\",\"params\":{\"_appBase\":\"Address of the app's base implementation\",\"_appId\":\"Identifier for app\",\"_initializePayload\":\"Payload for call made by the proxy during its construction to initialize\",\"_setDefault\":\"Whether the app proxy app is the default one.       Useful when the Kernel needs to know of an instance of a particular app,       like Vault for escape hatch mechanism.\"},\"return\":\"AppProxy instance\"},\"setApp(bytes32,bytes32,address)\":{\"details\":\"Set the resolving address of an app instance or base implementation\",\"params\":{\"_app\":\"Address of the app instance or base implementation\",\"_appId\":\"Identifier for app\",\"_namespace\":\"App namespace to use\"},\"return\":\"ID of app\"},\"setRecoveryVaultAppId(bytes32)\":{\"details\":\"Set the default vault id for the escape hatch mechanism\",\"params\":{\"_recoveryVaultAppId\":\"Identifier of the recovery vault app\"}},\"transferToVault(address)\":{\"params\":{\"_token\":\"Token balance to be sent to recovery vault.\"}}}},\"userdoc\":{\"methods\":{\"initialize(address,address)\":{\"notice\":\"Initialize this kernel instance along with its ACL and set `_permissionsCreator` as the entity that can create other permissions\"},\"newAppInstance(bytes32,address)\":{\"notice\":\"Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`\"},\"newAppInstance(bytes32,address,bytes,bool)\":{\"notice\":\"Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`\"},\"newAppProxy(address,bytes32)\":{\"notice\":\"Create a new upgradeable app instance on `_kernel` with identifier `_appId`\"},\"newAppProxy(address,bytes32,bytes)\":{\"notice\":\"Create a new upgradeable app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`\"},\"newAppProxyPinned(address,bytes32)\":{\"notice\":\"Create a new pinned app instance on `_kernel` with identifier `_appId`\"},\"newAppProxyPinned(address,bytes32,bytes)\":{\"notice\":\"Create a new pinned app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`\"},\"newPinnedAppInstance(bytes32,address)\":{\"notice\":\"Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`.\"},\"newPinnedAppInstance(bytes32,address,bytes,bool)\":{\"notice\":\"Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`\"},\"setApp(bytes32,bytes32,address)\":{\"notice\":\"Set the resolving address of `_appId` in namespace `_namespace` to `_app`\"},\"transferToVault(address)\":{\"notice\":\"Send funds to recovery Vault. This contract should never receive funds,        but in case it does, this function allows one to recover them.\"}}}},\"settings\":{\"compilationTarget\":{\"contracts/kernel/Kernel.sol\":\"Kernel\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[]},\"sources\":{\"contracts/acl/ACLSyntaxSugar.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ncontract ACLSyntaxSugar {\\n    function arr() internal pure returns (uint256[]) {\\n        return new uint256[](0);\\n    }\\n\\n    function arr(bytes32 _a) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a));\\n    }\\n\\n    function arr(bytes32 _a, bytes32 _b) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b));\\n    }\\n\\n    function arr(address _a) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a));\\n    }\\n\\n    function arr(address _a, address _b) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b));\\n    }\\n\\n    function arr(address _a, uint256 _b, uint256 _c) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), _b, _c);\\n    }\\n\\n    function arr(address _a, uint256 _b, uint256 _c, uint256 _d) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), _b, _c, _d);\\n    }\\n\\n    function arr(address _a, uint256 _b) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b));\\n    }\\n\\n    function arr(address _a, address _b, uint256 _c, uint256 _d, uint256 _e) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b), _c, _d, _e);\\n    }\\n\\n    function arr(address _a, address _b, address _c) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b), uint256(_c));\\n    }\\n\\n    function arr(address _a, address _b, uint256 _c) internal pure returns (uint256[] r) {\\n        return arr(uint256(_a), uint256(_b), uint256(_c));\\n    }\\n\\n    function arr(uint256 _a) internal pure returns (uint256[] r) {\\n        r = new uint256[](1);\\n        r[0] = _a;\\n    }\\n\\n    function arr(uint256 _a, uint256 _b) internal pure returns (uint256[] r) {\\n        r = new uint256[](2);\\n        r[0] = _a;\\n        r[1] = _b;\\n    }\\n\\n    function arr(uint256 _a, uint256 _b, uint256 _c) internal pure returns (uint256[] r) {\\n        r = new uint256[](3);\\n        r[0] = _a;\\n        r[1] = _b;\\n        r[2] = _c;\\n    }\\n\\n    function arr(uint256 _a, uint256 _b, uint256 _c, uint256 _d) internal pure returns (uint256[] r) {\\n        r = new uint256[](4);\\n        r[0] = _a;\\n        r[1] = _b;\\n        r[2] = _c;\\n        r[3] = _d;\\n    }\\n\\n    function arr(uint256 _a, uint256 _b, uint256 _c, uint256 _d, uint256 _e) internal pure returns (uint256[] r) {\\n        r = new uint256[](5);\\n        r[0] = _a;\\n        r[1] = _b;\\n        r[2] = _c;\\n        r[3] = _d;\\n        r[4] = _e;\\n    }\\n}\\n\\n\\ncontract ACLHelpers {\\n    function decodeParamOp(uint256 _x) internal pure returns (uint8 b) {\\n        return uint8(_x >> (8 * 30));\\n    }\\n\\n    function decodeParamId(uint256 _x) internal pure returns (uint8 b) {\\n        return uint8(_x >> (8 * 31));\\n    }\\n\\n    function decodeParamsList(uint256 _x) internal pure returns (uint32 a, uint32 b, uint32 c) {\\n        a = uint32(_x);\\n        b = uint32(_x >> (8 * 4));\\n        c = uint32(_x >> (8 * 8));\\n    }\\n}\\n\",\"keccak256\":\"0x672a96975fc17f66905e775645cc93249426ce9601aef597a13d1e449c7f89d0\"},\"contracts/acl/IACL.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ninterface IACL {\\n    function initialize(address permissionsCreator) external;\\n\\n    // TODO: this should be external\\n    // See https://github.com/ethereum/solidity/issues/4832\\n    function hasPermission(address who, address where, bytes32 what, bytes how) public view returns (bool);\\n}\\n\",\"keccak256\":\"0x7e081f42891bbcc8fa9f3a67efb34ecafa8e2c075e37a01d74d221c45ddfdd10\"},\"contracts/apps/AppProxyBase.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"./AppStorage.sol\\\";\\nimport \\\"../common/DepositableDelegateProxy.sol\\\";\\nimport \\\"../kernel/KernelConstants.sol\\\";\\nimport \\\"../kernel/IKernel.sol\\\";\\n\\n\\ncontract AppProxyBase is AppStorage, DepositableDelegateProxy, KernelNamespaceConstants {\\n    /**\\n    * @dev Initialize AppProxy\\n    * @param _kernel Reference to organization kernel for the app\\n    * @param _appId Identifier for app\\n    * @param _initializePayload Payload for call to be made after setup to initialize\\n    */\\n    constructor(IKernel _kernel, bytes32 _appId, bytes _initializePayload) public {\\n        setKernel(_kernel);\\n        setAppId(_appId);\\n\\n        // Implicit check that kernel is actually a Kernel\\n        // The EVM doesn't actually provide a way for us to make sure, but we can force a revert to\\n        // occur if the kernel is set to 0x0 or a non-code address when we try to call a method on\\n        // it.\\n        address appCode = getAppBase(_appId);\\n\\n        // If initialize payload is provided, it will be executed\\n        if (_initializePayload.length > 0) {\\n            require(isContract(appCode));\\n            // Cannot make delegatecall as a delegateproxy.delegatedFwd as it\\n            // returns ending execution context and halts contract deployment\\n            require(appCode.delegatecall(_initializePayload));\\n        }\\n    }\\n\\n    function getAppBase(bytes32 _appId) internal view returns (address) {\\n        return kernel().getApp(KERNEL_APP_BASES_NAMESPACE, _appId);\\n    }\\n}\\n\",\"keccak256\":\"0x6d591412d30dc3d5079f8c5cab04f83ad44be376a9e4143d4a3b2067cd7a4483\"},\"contracts/apps/AppProxyPinned.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"../common/UnstructuredStorage.sol\\\";\\nimport \\\"../common/IsContract.sol\\\";\\nimport \\\"./AppProxyBase.sol\\\";\\n\\n\\ncontract AppProxyPinned is IsContract, AppProxyBase {\\n    using UnstructuredStorage for bytes32;\\n\\n    // keccak256(\\\"aragonOS.appStorage.pinnedCode\\\")\\n    bytes32 internal constant PINNED_CODE_POSITION = 0xdee64df20d65e53d7f51cb6ab6d921a0a6a638a91e942e1d8d02df28e31c038e;\\n\\n    /**\\n    * @dev Initialize AppProxyPinned (makes it an un-upgradeable Aragon app)\\n    * @param _kernel Reference to organization kernel for the app\\n    * @param _appId Identifier for app\\n    * @param _initializePayload Payload for call to be made after setup to initialize\\n    */\\n    constructor(IKernel _kernel, bytes32 _appId, bytes _initializePayload)\\n        AppProxyBase(_kernel, _appId, _initializePayload)\\n        public // solium-disable-line visibility-first\\n    {\\n        setPinnedCode(getAppBase(_appId));\\n        require(isContract(pinnedCode()));\\n    }\\n\\n    /**\\n     * @dev ERC897, the address the proxy would delegate calls to\\n     */\\n    function implementation() public view returns (address) {\\n        return pinnedCode();\\n    }\\n\\n    /**\\n     * @dev ERC897, whether it is a forwarding (1) or an upgradeable (2) proxy\\n     */\\n    function proxyType() public pure returns (uint256 proxyTypeId) {\\n        return FORWARDING;\\n    }\\n\\n    function setPinnedCode(address _pinnedCode) internal {\\n        PINNED_CODE_POSITION.setStorageAddress(_pinnedCode);\\n    }\\n\\n    function pinnedCode() internal view returns (address) {\\n        return PINNED_CODE_POSITION.getStorageAddress();\\n    }\\n}\\n\",\"keccak256\":\"0xbe6285bcc237c696e297948be02cfad8d48812ba52d67f8947b52c0546da53b1\"},\"contracts/apps/AppProxyUpgradeable.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"./AppProxyBase.sol\\\";\\n\\n\\ncontract AppProxyUpgradeable is AppProxyBase {\\n    /**\\n    * @dev Initialize AppProxyUpgradeable (makes it an upgradeable Aragon app)\\n    * @param _kernel Reference to organization kernel for the app\\n    * @param _appId Identifier for app\\n    * @param _initializePayload Payload for call to be made after setup to initialize\\n    */\\n    constructor(IKernel _kernel, bytes32 _appId, bytes _initializePayload)\\n        AppProxyBase(_kernel, _appId, _initializePayload)\\n        public // solium-disable-line visibility-first\\n    {\\n        // solium-disable-previous-line no-empty-blocks\\n    }\\n\\n    /**\\n     * @dev ERC897, the address the proxy would delegate calls to\\n     */\\n    function implementation() public view returns (address) {\\n        return getAppBase(appId());\\n    }\\n\\n    /**\\n     * @dev ERC897, whether it is a forwarding (1) or an upgradeable (2) proxy\\n     */\\n    function proxyType() public pure returns (uint256 proxyTypeId) {\\n        return UPGRADEABLE;\\n    }\\n}\\n\",\"keccak256\":\"0xbcc626f70099c7e859b9c2bb8ca91e72b84f9e6783f91277e40737d51bd2c433\"},\"contracts/apps/AppStorage.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"../common/UnstructuredStorage.sol\\\";\\nimport \\\"../kernel/IKernel.sol\\\";\\n\\n\\ncontract AppStorage {\\n    using UnstructuredStorage for bytes32;\\n\\n    /* Hardcoded constants to save gas\\n    bytes32 internal constant KERNEL_POSITION = keccak256(\\\"aragonOS.appStorage.kernel\\\");\\n    bytes32 internal constant APP_ID_POSITION = keccak256(\\\"aragonOS.appStorage.appId\\\");\\n    */\\n    bytes32 internal constant KERNEL_POSITION = 0x4172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137b;\\n    bytes32 internal constant APP_ID_POSITION = 0xd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b;\\n\\n    function kernel() public view returns (IKernel) {\\n        return IKernel(KERNEL_POSITION.getStorageAddress());\\n    }\\n\\n    function appId() public view returns (bytes32) {\\n        return APP_ID_POSITION.getStorageBytes32();\\n    }\\n\\n    function setKernel(IKernel _kernel) internal {\\n        KERNEL_POSITION.setStorageAddress(address(_kernel));\\n    }\\n\\n    function setAppId(bytes32 _appId) internal {\\n        APP_ID_POSITION.setStorageBytes32(_appId);\\n    }\\n}\\n\",\"keccak256\":\"0x37324058906601970b1ef5cbe8f2af93144d3b723c2a33e468142cdc753c829b\"},\"contracts/common/ConversionHelpers.sol\":{\"content\":\"pragma solidity ^0.4.24;\\n\\n\\nlibrary ConversionHelpers {\\n    string private constant ERROR_IMPROPER_LENGTH = \\\"CONVERSION_IMPROPER_LENGTH\\\";\\n\\n    function dangerouslyCastUintArrayToBytes(uint256[] memory _input) internal pure returns (bytes memory output) {\\n        // Force cast the uint256[] into a bytes array, by overwriting its length\\n        // Note that the bytes array doesn't need to be initialized as we immediately overwrite it\\n        // with the input and a new length. The input becomes invalid from this point forward.\\n        uint256 byteLength = _input.length * 32;\\n        assembly {\\n            output := _input\\n            mstore(output, byteLength)\\n        }\\n    }\\n\\n    function dangerouslyCastBytesToUintArray(bytes memory _input) internal pure returns (uint256[] memory output) {\\n        // Force cast the bytes array into a uint256[], by overwriting its length\\n        // Note that the uint256[] doesn't need to be initialized as we immediately overwrite it\\n        // with the input and a new length. The input becomes invalid from this point forward.\\n        uint256 intsLength = _input.length / 32;\\n        require(_input.length == intsLength * 32, ERROR_IMPROPER_LENGTH);\\n\\n        assembly {\\n            output := _input\\n            mstore(output, intsLength)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x9872383d458352f5c68fa5afd1fc84ab6b172cbee33359cfa57655b8eda92416\"},\"contracts/common/DelegateProxy.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"../common/IsContract.sol\\\";\\nimport \\\"../lib/misc/ERCProxy.sol\\\";\\n\\n\\ncontract DelegateProxy is ERCProxy, IsContract {\\n    uint256 internal constant FWD_GAS_LIMIT = 10000;\\n\\n    /**\\n    * @dev Performs a delegatecall and returns whatever the delegatecall returned (entire context execution will return!)\\n    * @param _dst Destination address to perform the delegatecall\\n    * @param _calldata Calldata for the delegatecall\\n    */\\n    function delegatedFwd(address _dst, bytes _calldata) internal {\\n        require(isContract(_dst));\\n        uint256 fwdGasLimit = FWD_GAS_LIMIT;\\n\\n        assembly {\\n            let result := delegatecall(sub(gas, fwdGasLimit), _dst, add(_calldata, 0x20), mload(_calldata), 0, 0)\\n            let size := returndatasize\\n            let ptr := mload(0x40)\\n            returndatacopy(ptr, 0, size)\\n\\n            // revert instead of invalid() bc if the underlying call failed with invalid() it already wasted gas.\\n            // if the call returned error data, forward it\\n            switch result case 0 { revert(ptr, size) }\\n            default { return(ptr, size) }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x381a4ab9b57abf496b337146a52d533aaf6a8247941fbc19735cbde0e891e85b\"},\"contracts/common/DepositableDelegateProxy.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"./DelegateProxy.sol\\\";\\nimport \\\"./DepositableStorage.sol\\\";\\n\\n\\ncontract DepositableDelegateProxy is DepositableStorage, DelegateProxy {\\n    event ProxyDeposit(address sender, uint256 value);\\n\\n    function () external payable {\\n        uint256 forwardGasThreshold = FWD_GAS_LIMIT;\\n        bytes32 isDepositablePosition = DEPOSITABLE_POSITION;\\n\\n        // Optimized assembly implementation to prevent EIP-1884 from breaking deposits, reference code in Solidity:\\n        // https://github.com/aragon/aragonOS/blob/v4.2.1/contracts/common/DepositableDelegateProxy.sol#L10-L20\\n        assembly {\\n            // Continue only if the gas left is lower than the threshold for forwarding to the implementation code,\\n            // otherwise continue outside of the assembly block.\\n            if lt(gas, forwardGasThreshold) {\\n                // Only accept the deposit and emit an event if all of the following are true:\\n                // the proxy accepts deposits (isDepositable), msg.data.length == 0, and msg.value > 0\\n                if and(and(sload(isDepositablePosition), iszero(calldatasize)), gt(callvalue, 0)) {\\n                    // Equivalent Solidity code for emitting the event:\\n                    // emit ProxyDeposit(msg.sender, msg.value);\\n\\n                    let logData := mload(0x40) // free memory pointer\\n                    mstore(logData, caller) // add 'msg.sender' to the log data (first event param)\\n                    mstore(add(logData, 0x20), callvalue) // add 'msg.value' to the log data (second event param)\\n\\n                    // Emit an event with one topic to identify the event: keccak256('ProxyDeposit(address,uint256)') = 0x15ee...dee1\\n                    log1(logData, 0x40, 0x15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1)\\n\\n                    stop() // Stop. Exits execution context\\n                }\\n\\n                // If any of above checks failed, revert the execution (if ETH was sent, it is returned to the sender)\\n                revert(0, 0)\\n            }\\n        }\\n\\n        address target = implementation();\\n        delegatedFwd(target, msg.data);\\n    }\\n}\\n\",\"keccak256\":\"0x80a08f88ca7051a248c6fd91283fef4b01b241d1dc97e13499f1460093ff3068\"},\"contracts/common/DepositableStorage.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"./UnstructuredStorage.sol\\\";\\n\\n\\ncontract DepositableStorage {\\n    using UnstructuredStorage for bytes32;\\n\\n    // keccak256(\\\"aragonOS.depositableStorage.depositable\\\")\\n    bytes32 internal constant DEPOSITABLE_POSITION = 0x665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea;\\n\\n    function isDepositable() public view returns (bool) {\\n        return DEPOSITABLE_POSITION.getStorageBool();\\n    }\\n\\n    function setDepositable(bool _depositable) internal {\\n        DEPOSITABLE_POSITION.setStorageBool(_depositable);\\n    }\\n}\\n\",\"keccak256\":\"0x67e1884ba4c91de1c6fe1fc2c1c632c29ed3e7894a434c049be9f1ed80539237\"},\"contracts/common/EtherTokenConstant.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\n// aragonOS and aragon-apps rely on address(0) to denote native ETH, in\\n// contracts where both tokens and ETH are accepted\\ncontract EtherTokenConstant {\\n    address internal constant ETH = address(0);\\n}\\n\",\"keccak256\":\"0x6b2fa091968161075154a77fa741a3484c891d73cd3cd14ede502ff56dd08dfc\"},\"contracts/common/IVaultRecoverable.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ninterface IVaultRecoverable {\\n    event RecoverToVault(address indexed vault, address indexed token, uint256 amount);\\n\\n    function transferToVault(address token) external;\\n\\n    function allowRecoverability(address token) external view returns (bool);\\n    function getRecoveryVault() external view returns (address);\\n}\\n\",\"keccak256\":\"0xa8e004decf086e817a864b485473b687c2c468c82af7b5011d9908586f7cbf36\"},\"contracts/common/Initializable.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"./TimeHelpers.sol\\\";\\nimport \\\"./UnstructuredStorage.sol\\\";\\n\\n\\ncontract Initializable is TimeHelpers {\\n    using UnstructuredStorage for bytes32;\\n\\n    // keccak256(\\\"aragonOS.initializable.initializationBlock\\\")\\n    bytes32 internal constant INITIALIZATION_BLOCK_POSITION = 0xebb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e;\\n\\n    string private constant ERROR_ALREADY_INITIALIZED = \\\"INIT_ALREADY_INITIALIZED\\\";\\n    string private constant ERROR_NOT_INITIALIZED = \\\"INIT_NOT_INITIALIZED\\\";\\n\\n    modifier onlyInit {\\n        require(getInitializationBlock() == 0, ERROR_ALREADY_INITIALIZED);\\n        _;\\n    }\\n\\n    modifier isInitialized {\\n        require(hasInitialized(), ERROR_NOT_INITIALIZED);\\n        _;\\n    }\\n\\n    /**\\n    * @return Block number in which the contract was initialized\\n    */\\n    function getInitializationBlock() public view returns (uint256) {\\n        return INITIALIZATION_BLOCK_POSITION.getStorageUint256();\\n    }\\n\\n    /**\\n    * @return Whether the contract has been initialized by the time of the current block\\n    */\\n    function hasInitialized() public view returns (bool) {\\n        uint256 initializationBlock = getInitializationBlock();\\n        return initializationBlock != 0 && getBlockNumber() >= initializationBlock;\\n    }\\n\\n    /**\\n    * @dev Function to be called by top level contract after initialization has finished.\\n    */\\n    function initialized() internal onlyInit {\\n        INITIALIZATION_BLOCK_POSITION.setStorageUint256(getBlockNumber());\\n    }\\n\\n    /**\\n    * @dev Function to be called by top level contract after initialization to enable the contract\\n    *      at a future block number rather than immediately.\\n    */\\n    function initializedAt(uint256 _blockNumber) internal onlyInit {\\n        INITIALIZATION_BLOCK_POSITION.setStorageUint256(_blockNumber);\\n    }\\n}\\n\",\"keccak256\":\"0xc859366d3143499d1458ea55cb5374ae1ca1faf41763cad5e051dea2da373ba1\"},\"contracts/common/IsContract.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ncontract IsContract {\\n    /*\\n    * NOTE: this should NEVER be used for authentication\\n    * (see pitfalls: https://github.com/fergarrui/ethereum-security/tree/master/contracts/extcodesize).\\n    *\\n    * This is only intended to be used as a sanity check that an address is actually a contract,\\n    * RATHER THAN an address not being a contract.\\n    */\\n    function isContract(address _target) internal view returns (bool) {\\n        if (_target == address(0)) {\\n            return false;\\n        }\\n\\n        uint256 size;\\n        assembly { size := extcodesize(_target) }\\n        return size > 0;\\n    }\\n}\\n\",\"keccak256\":\"0x9dd99d770a5eed901ba749e1f02e4fae443e71e899f4909f56825dfc378da089\"},\"contracts/common/Petrifiable.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"./Initializable.sol\\\";\\n\\n\\ncontract Petrifiable is Initializable {\\n    // Use block UINT256_MAX (which should be never) as the initializable date\\n    uint256 internal constant PETRIFIED_BLOCK = uint256(-1);\\n\\n    function isPetrified() public view returns (bool) {\\n        return getInitializationBlock() == PETRIFIED_BLOCK;\\n    }\\n\\n    /**\\n    * @dev Function to be called by top level contract to prevent being initialized.\\n    *      Useful for freezing base contracts when they're used behind proxies.\\n    */\\n    function petrify() internal onlyInit {\\n        initializedAt(PETRIFIED_BLOCK);\\n    }\\n}\\n\",\"keccak256\":\"0x797d3a58b782032f6afc51725326c0b51dceb00f3af6b85b25bd91cc10d22504\"},\"contracts/common/SafeERC20.sol\":{\"content\":\"// Inspired by AdEx (https://github.com/AdExNetwork/adex-protocol-eth/blob/b9df617829661a7518ee10f4cb6c4108659dd6d5/contracts/libs/SafeERC20.sol)\\n// and 0x (https://github.com/0xProject/0x-monorepo/blob/737d1dc54d72872e24abce5a1dbe1b66d35fa21a/contracts/protocol/contracts/protocol/AssetProxy/ERC20Proxy.sol#L143)\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"../lib/token/ERC20.sol\\\";\\n\\n\\nlibrary SafeERC20 {\\n    // Before 0.5, solidity has a mismatch between `address.transfer()` and `token.transfer()`:\\n    // https://github.com/ethereum/solidity/issues/3544\\n    bytes4 private constant TRANSFER_SELECTOR = 0xa9059cbb;\\n\\n    string private constant ERROR_TOKEN_BALANCE_REVERTED = \\\"SAFE_ERC_20_BALANCE_REVERTED\\\";\\n    string private constant ERROR_TOKEN_ALLOWANCE_REVERTED = \\\"SAFE_ERC_20_ALLOWANCE_REVERTED\\\";\\n\\n    function invokeAndCheckSuccess(address _addr, bytes memory _calldata)\\n        private\\n        returns (bool)\\n    {\\n        bool ret;\\n        assembly {\\n            let ptr := mload(0x40)    // free memory pointer\\n\\n            let success := call(\\n                gas,                  // forward all gas\\n                _addr,                // address\\n                0,                    // no value\\n                add(_calldata, 0x20), // calldata start\\n                mload(_calldata),     // calldata length\\n                ptr,                  // write output over free memory\\n                0x20                  // uint256 return\\n            )\\n\\n            if gt(success, 0) {\\n                // Check number of bytes returned from last function call\\n                switch returndatasize\\n\\n                // No bytes returned: assume success\\n                case 0 {\\n                    ret := 1\\n                }\\n\\n                // 32 bytes returned: check if non-zero\\n                case 0x20 {\\n                    // Only return success if returned data was true\\n                    // Already have output in ptr\\n                    ret := eq(mload(ptr), 1)\\n                }\\n\\n                // Not sure what was returned: don't mark as success\\n                default { }\\n            }\\n        }\\n        return ret;\\n    }\\n\\n    function staticInvoke(address _addr, bytes memory _calldata)\\n        private\\n        view\\n        returns (bool, uint256)\\n    {\\n        bool success;\\n        uint256 ret;\\n        assembly {\\n            let ptr := mload(0x40)    // free memory pointer\\n\\n            success := staticcall(\\n                gas,                  // forward all gas\\n                _addr,                // address\\n                add(_calldata, 0x20), // calldata start\\n                mload(_calldata),     // calldata length\\n                ptr,                  // write output over free memory\\n                0x20                  // uint256 return\\n            )\\n\\n            if gt(success, 0) {\\n                ret := mload(ptr)\\n            }\\n        }\\n        return (success, ret);\\n    }\\n\\n    /**\\n    * @dev Same as a standards-compliant ERC20.transfer() that never reverts (returns false).\\n    *      Note that this makes an external call to the token.\\n    */\\n    function safeTransfer(ERC20 _token, address _to, uint256 _amount) internal returns (bool) {\\n        bytes memory transferCallData = abi.encodeWithSelector(\\n            TRANSFER_SELECTOR,\\n            _to,\\n            _amount\\n        );\\n        return invokeAndCheckSuccess(_token, transferCallData);\\n    }\\n\\n    /**\\n    * @dev Same as a standards-compliant ERC20.transferFrom() that never reverts (returns false).\\n    *      Note that this makes an external call to the token.\\n    */\\n    function safeTransferFrom(ERC20 _token, address _from, address _to, uint256 _amount) internal returns (bool) {\\n        bytes memory transferFromCallData = abi.encodeWithSelector(\\n            _token.transferFrom.selector,\\n            _from,\\n            _to,\\n            _amount\\n        );\\n        return invokeAndCheckSuccess(_token, transferFromCallData);\\n    }\\n\\n    /**\\n    * @dev Same as a standards-compliant ERC20.approve() that never reverts (returns false).\\n    *      Note that this makes an external call to the token.\\n    */\\n    function safeApprove(ERC20 _token, address _spender, uint256 _amount) internal returns (bool) {\\n        bytes memory approveCallData = abi.encodeWithSelector(\\n            _token.approve.selector,\\n            _spender,\\n            _amount\\n        );\\n        return invokeAndCheckSuccess(_token, approveCallData);\\n    }\\n\\n    /**\\n    * @dev Static call into ERC20.balanceOf().\\n    * Reverts if the call fails for some reason (should never fail).\\n    */\\n    function staticBalanceOf(ERC20 _token, address _owner) internal view returns (uint256) {\\n        bytes memory balanceOfCallData = abi.encodeWithSelector(\\n            _token.balanceOf.selector,\\n            _owner\\n        );\\n\\n        (bool success, uint256 tokenBalance) = staticInvoke(_token, balanceOfCallData);\\n        require(success, ERROR_TOKEN_BALANCE_REVERTED);\\n\\n        return tokenBalance;\\n    }\\n\\n    /**\\n    * @dev Static call into ERC20.allowance().\\n    * Reverts if the call fails for some reason (should never fail).\\n    */\\n    function staticAllowance(ERC20 _token, address _owner, address _spender) internal view returns (uint256) {\\n        bytes memory allowanceCallData = abi.encodeWithSelector(\\n            _token.allowance.selector,\\n            _owner,\\n            _spender\\n        );\\n\\n        (bool success, uint256 allowance) = staticInvoke(_token, allowanceCallData);\\n        require(success, ERROR_TOKEN_ALLOWANCE_REVERTED);\\n\\n        return allowance;\\n    }\\n\\n    /**\\n    * @dev Static call into ERC20.totalSupply().\\n    * Reverts if the call fails for some reason (should never fail).\\n    */\\n    function staticTotalSupply(ERC20 _token) internal view returns (uint256) {\\n        bytes memory totalSupplyCallData = abi.encodeWithSelector(_token.totalSupply.selector);\\n\\n        (bool success, uint256 totalSupply) = staticInvoke(_token, totalSupplyCallData);\\n        require(success, ERROR_TOKEN_ALLOWANCE_REVERTED);\\n\\n        return totalSupply;\\n    }\\n}\\n\",\"keccak256\":\"0xd251a1207e1faa4c41500bf927310bb739b1fbc0bf880f236f8e0a9236d6a03a\"},\"contracts/common/TimeHelpers.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"./Uint256Helpers.sol\\\";\\n\\n\\ncontract TimeHelpers {\\n    using Uint256Helpers for uint256;\\n\\n    /**\\n    * @dev Returns the current block number.\\n    *      Using a function rather than `block.number` allows us to easily mock the block number in\\n    *      tests.\\n    */\\n    function getBlockNumber() internal view returns (uint256) {\\n        return block.number;\\n    }\\n\\n    /**\\n    * @dev Returns the current block number, converted to uint64.\\n    *      Using a function rather than `block.number` allows us to easily mock the block number in\\n    *      tests.\\n    */\\n    function getBlockNumber64() internal view returns (uint64) {\\n        return getBlockNumber().toUint64();\\n    }\\n\\n    /**\\n    * @dev Returns the current timestamp.\\n    *      Using a function rather than `block.timestamp` allows us to easily mock it in\\n    *      tests.\\n    */\\n    function getTimestamp() internal view returns (uint256) {\\n        return block.timestamp; // solium-disable-line security/no-block-members\\n    }\\n\\n    /**\\n    * @dev Returns the current timestamp, converted to uint64.\\n    *      Using a function rather than `block.timestamp` allows us to easily mock it in\\n    *      tests.\\n    */\\n    function getTimestamp64() internal view returns (uint64) {\\n        return getTimestamp().toUint64();\\n    }\\n}\\n\",\"keccak256\":\"0xfaba85207f0bb4bb5d7b6685a963c39a3258641bda6e523175640c3f9aeb2045\"},\"contracts/common/Uint256Helpers.sol\":{\"content\":\"pragma solidity ^0.4.24;\\n\\n\\nlibrary Uint256Helpers {\\n    uint256 private constant MAX_UINT64 = uint64(-1);\\n\\n    string private constant ERROR_NUMBER_TOO_BIG = \\\"UINT64_NUMBER_TOO_BIG\\\";\\n\\n    function toUint64(uint256 a) internal pure returns (uint64) {\\n        require(a <= MAX_UINT64, ERROR_NUMBER_TOO_BIG);\\n        return uint64(a);\\n    }\\n}\\n\",\"keccak256\":\"0x83033025a3f4402be3b7bcc9a23ce96ae4fadc7f251da8f139d73a13a3400b0c\"},\"contracts/common/UnstructuredStorage.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\nlibrary UnstructuredStorage {\\n    function getStorageBool(bytes32 position) internal view returns (bool data) {\\n        assembly { data := sload(position) }\\n    }\\n\\n    function getStorageAddress(bytes32 position) internal view returns (address data) {\\n        assembly { data := sload(position) }\\n    }\\n\\n    function getStorageBytes32(bytes32 position) internal view returns (bytes32 data) {\\n        assembly { data := sload(position) }\\n    }\\n\\n    function getStorageUint256(bytes32 position) internal view returns (uint256 data) {\\n        assembly { data := sload(position) }\\n    }\\n\\n    function setStorageBool(bytes32 position, bool data) internal {\\n        assembly { sstore(position, data) }\\n    }\\n\\n    function setStorageAddress(bytes32 position, address data) internal {\\n        assembly { sstore(position, data) }\\n    }\\n\\n    function setStorageBytes32(bytes32 position, bytes32 data) internal {\\n        assembly { sstore(position, data) }\\n    }\\n\\n    function setStorageUint256(bytes32 position, uint256 data) internal {\\n        assembly { sstore(position, data) }\\n    }\\n}\\n\",\"keccak256\":\"0xe497dcb85bbbf10224623247f39a4aeed7d3b230de2a811f3b69cb0e7d0a64d4\"},\"contracts/common/VaultRecoverable.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"../lib/token/ERC20.sol\\\";\\nimport \\\"./EtherTokenConstant.sol\\\";\\nimport \\\"./IsContract.sol\\\";\\nimport \\\"./IVaultRecoverable.sol\\\";\\nimport \\\"./SafeERC20.sol\\\";\\n\\n\\ncontract VaultRecoverable is IVaultRecoverable, EtherTokenConstant, IsContract {\\n    using SafeERC20 for ERC20;\\n\\n    string private constant ERROR_DISALLOWED = \\\"RECOVER_DISALLOWED\\\";\\n    string private constant ERROR_VAULT_NOT_CONTRACT = \\\"RECOVER_VAULT_NOT_CONTRACT\\\";\\n    string private constant ERROR_TOKEN_TRANSFER_FAILED = \\\"RECOVER_TOKEN_TRANSFER_FAILED\\\";\\n\\n    /**\\n     * @notice Send funds to recovery Vault. This contract should never receive funds,\\n     *         but in case it does, this function allows one to recover them.\\n     * @param _token Token balance to be sent to recovery vault.\\n     */\\n    function transferToVault(address _token) external {\\n        require(allowRecoverability(_token), ERROR_DISALLOWED);\\n        address vault = getRecoveryVault();\\n        require(isContract(vault), ERROR_VAULT_NOT_CONTRACT);\\n\\n        uint256 balance;\\n        if (_token == ETH) {\\n            balance = address(this).balance;\\n            vault.transfer(balance);\\n        } else {\\n            ERC20 token = ERC20(_token);\\n            balance = token.staticBalanceOf(this);\\n            require(token.safeTransfer(vault, balance), ERROR_TOKEN_TRANSFER_FAILED);\\n        }\\n\\n        emit RecoverToVault(vault, _token, balance);\\n    }\\n\\n    /**\\n    * @dev By default deriving from AragonApp makes it recoverable\\n    * @param token Token address that would be recovered\\n    * @return bool whether the app allows the recovery\\n    */\\n    function allowRecoverability(address token) public view returns (bool) {\\n        return true;\\n    }\\n\\n    // Cast non-implemented interface to be public so we can use it internally\\n    function getRecoveryVault() public view returns (address);\\n}\\n\",\"keccak256\":\"0xea4ded621a63f988b83ac27b4a23cad0a42c3d77bcf6ca7b88681ae4ea650cf4\"},\"contracts/factory/AppProxyFactory.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"../apps/AppProxyUpgradeable.sol\\\";\\nimport \\\"../apps/AppProxyPinned.sol\\\";\\n\\n\\ncontract AppProxyFactory {\\n    event NewAppProxy(address proxy, bool isUpgradeable, bytes32 appId);\\n\\n    /**\\n    * @notice Create a new upgradeable app instance on `_kernel` with identifier `_appId`\\n    * @param _kernel App's Kernel reference\\n    * @param _appId Identifier for app\\n    * @return AppProxyUpgradeable\\n    */\\n    function newAppProxy(IKernel _kernel, bytes32 _appId) public returns (AppProxyUpgradeable) {\\n        return newAppProxy(_kernel, _appId, new bytes(0));\\n    }\\n\\n    /**\\n    * @notice Create a new upgradeable app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`\\n    * @param _kernel App's Kernel reference\\n    * @param _appId Identifier for app\\n    * @return AppProxyUpgradeable\\n    */\\n    function newAppProxy(IKernel _kernel, bytes32 _appId, bytes _initializePayload) public returns (AppProxyUpgradeable) {\\n        AppProxyUpgradeable proxy = new AppProxyUpgradeable(_kernel, _appId, _initializePayload);\\n        emit NewAppProxy(address(proxy), true, _appId);\\n        return proxy;\\n    }\\n\\n    /**\\n    * @notice Create a new pinned app instance on `_kernel` with identifier `_appId`\\n    * @param _kernel App's Kernel reference\\n    * @param _appId Identifier for app\\n    * @return AppProxyPinned\\n    */\\n    function newAppProxyPinned(IKernel _kernel, bytes32 _appId) public returns (AppProxyPinned) {\\n        return newAppProxyPinned(_kernel, _appId, new bytes(0));\\n    }\\n\\n    /**\\n    * @notice Create a new pinned app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`\\n    * @param _kernel App's Kernel reference\\n    * @param _appId Identifier for app\\n    * @param _initializePayload Proxy initialization payload\\n    * @return AppProxyPinned\\n    */\\n    function newAppProxyPinned(IKernel _kernel, bytes32 _appId, bytes _initializePayload) public returns (AppProxyPinned) {\\n        AppProxyPinned proxy = new AppProxyPinned(_kernel, _appId, _initializePayload);\\n        emit NewAppProxy(address(proxy), false, _appId);\\n        return proxy;\\n    }\\n}\\n\",\"keccak256\":\"0x94e88f4e8747be9487e32069eb22c1455ffc49cfd1299ef1eba212049c2db115\"},\"contracts/kernel/IKernel.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\nimport \\\"../acl/IACL.sol\\\";\\nimport \\\"../common/IVaultRecoverable.sol\\\";\\n\\n\\ninterface IKernelEvents {\\n    event SetApp(bytes32 indexed namespace, bytes32 indexed appId, address app);\\n}\\n\\n\\n// This should be an interface, but interfaces can't inherit yet :(\\ncontract IKernel is IKernelEvents, IVaultRecoverable {\\n    function acl() public view returns (IACL);\\n    function hasPermission(address who, address where, bytes32 what, bytes how) public view returns (bool);\\n\\n    function setApp(bytes32 namespace, bytes32 appId, address app) public;\\n    function getApp(bytes32 namespace, bytes32 appId) public view returns (address);\\n}\\n\",\"keccak256\":\"0x96e9fd607b156a96905ec0108bb4fbcc5ad85212bb98e03600069bb5727d2daa\"},\"contracts/kernel/Kernel.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"./IKernel.sol\\\";\\nimport \\\"./KernelConstants.sol\\\";\\nimport \\\"./KernelStorage.sol\\\";\\nimport \\\"../acl/IACL.sol\\\";\\nimport \\\"../acl/ACLSyntaxSugar.sol\\\";\\nimport \\\"../common/ConversionHelpers.sol\\\";\\nimport \\\"../common/IsContract.sol\\\";\\nimport \\\"../common/Petrifiable.sol\\\";\\nimport \\\"../common/VaultRecoverable.sol\\\";\\nimport \\\"../factory/AppProxyFactory.sol\\\";\\nimport \\\"../lib/misc/ERCProxy.sol\\\";\\n\\n\\n// solium-disable-next-line max-len\\ncontract Kernel is IKernel, KernelStorage, KernelAppIds, KernelNamespaceConstants, Petrifiable, IsContract, VaultRecoverable, AppProxyFactory, ACLSyntaxSugar {\\n    /* Hardcoded constants to save gas\\n    bytes32 public constant APP_MANAGER_ROLE = keccak256(\\\"APP_MANAGER_ROLE\\\");\\n    */\\n    bytes32 public constant APP_MANAGER_ROLE = 0xb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd0;\\n\\n    string private constant ERROR_APP_NOT_CONTRACT = \\\"KERNEL_APP_NOT_CONTRACT\\\";\\n    string private constant ERROR_INVALID_APP_CHANGE = \\\"KERNEL_INVALID_APP_CHANGE\\\";\\n    string private constant ERROR_AUTH_FAILED = \\\"KERNEL_AUTH_FAILED\\\";\\n\\n    /**\\n    * @dev Constructor that allows the deployer to choose if the base instance should be petrified immediately.\\n    * @param _shouldPetrify Immediately petrify this instance so that it can never be initialized\\n    */\\n    constructor(bool _shouldPetrify) public {\\n        if (_shouldPetrify) {\\n            petrify();\\n        }\\n    }\\n\\n    /**\\n    * @dev Initialize can only be called once. It saves the block number in which it was initialized.\\n    * @notice Initialize this kernel instance along with its ACL and set `_permissionsCreator` as the entity that can create other permissions\\n    * @param _baseAcl Address of base ACL app\\n    * @param _permissionsCreator Entity that will be given permission over createPermission\\n    */\\n    function initialize(IACL _baseAcl, address _permissionsCreator) public onlyInit {\\n        initialized();\\n\\n        // Set ACL base\\n        _setApp(KERNEL_APP_BASES_NAMESPACE, KERNEL_DEFAULT_ACL_APP_ID, _baseAcl);\\n\\n        // Create ACL instance and attach it as the default ACL app\\n        IACL acl = IACL(newAppProxy(this, KERNEL_DEFAULT_ACL_APP_ID));\\n        acl.initialize(_permissionsCreator);\\n        _setApp(KERNEL_APP_ADDR_NAMESPACE, KERNEL_DEFAULT_ACL_APP_ID, acl);\\n\\n        recoveryVaultAppId = KERNEL_DEFAULT_VAULT_APP_ID;\\n    }\\n\\n    /**\\n    * @dev Create a new instance of an app linked to this kernel\\n    * @notice Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`\\n    * @param _appId Identifier for app\\n    * @param _appBase Address of the app's base implementation\\n    * @return AppProxy instance\\n    */\\n    function newAppInstance(bytes32 _appId, address _appBase)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(KERNEL_APP_BASES_NAMESPACE, _appId))\\n        returns (ERCProxy appProxy)\\n    {\\n        return newAppInstance(_appId, _appBase, new bytes(0), false);\\n    }\\n\\n    /**\\n    * @dev Create a new instance of an app linked to this kernel and set its base\\n    *      implementation if it was not already set\\n    * @notice Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`\\n    * @param _appId Identifier for app\\n    * @param _appBase Address of the app's base implementation\\n    * @param _initializePayload Payload for call made by the proxy during its construction to initialize\\n    * @param _setDefault Whether the app proxy app is the default one.\\n    *        Useful when the Kernel needs to know of an instance of a particular app,\\n    *        like Vault for escape hatch mechanism.\\n    * @return AppProxy instance\\n    */\\n    function newAppInstance(bytes32 _appId, address _appBase, bytes _initializePayload, bool _setDefault)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(KERNEL_APP_BASES_NAMESPACE, _appId))\\n        returns (ERCProxy appProxy)\\n    {\\n        _setAppIfNew(KERNEL_APP_BASES_NAMESPACE, _appId, _appBase);\\n        appProxy = newAppProxy(this, _appId, _initializePayload);\\n        // By calling setApp directly and not the internal functions, we make sure the params are checked\\n        // and it will only succeed if sender has permissions to set something to the namespace.\\n        if (_setDefault) {\\n            setApp(KERNEL_APP_ADDR_NAMESPACE, _appId, appProxy);\\n        }\\n    }\\n\\n    /**\\n    * @dev Create a new pinned instance of an app linked to this kernel\\n    * @notice Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`.\\n    * @param _appId Identifier for app\\n    * @param _appBase Address of the app's base implementation\\n    * @return AppProxy instance\\n    */\\n    function newPinnedAppInstance(bytes32 _appId, address _appBase)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(KERNEL_APP_BASES_NAMESPACE, _appId))\\n        returns (ERCProxy appProxy)\\n    {\\n        return newPinnedAppInstance(_appId, _appBase, new bytes(0), false);\\n    }\\n\\n    /**\\n    * @dev Create a new pinned instance of an app linked to this kernel and set\\n    *      its base implementation if it was not already set\\n    * @notice Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`\\n    * @param _appId Identifier for app\\n    * @param _appBase Address of the app's base implementation\\n    * @param _initializePayload Payload for call made by the proxy during its construction to initialize\\n    * @param _setDefault Whether the app proxy app is the default one.\\n    *        Useful when the Kernel needs to know of an instance of a particular app,\\n    *        like Vault for escape hatch mechanism.\\n    * @return AppProxy instance\\n    */\\n    function newPinnedAppInstance(bytes32 _appId, address _appBase, bytes _initializePayload, bool _setDefault)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(KERNEL_APP_BASES_NAMESPACE, _appId))\\n        returns (ERCProxy appProxy)\\n    {\\n        _setAppIfNew(KERNEL_APP_BASES_NAMESPACE, _appId, _appBase);\\n        appProxy = newAppProxyPinned(this, _appId, _initializePayload);\\n        // By calling setApp directly and not the internal functions, we make sure the params are checked\\n        // and it will only succeed if sender has permissions to set something to the namespace.\\n        if (_setDefault) {\\n            setApp(KERNEL_APP_ADDR_NAMESPACE, _appId, appProxy);\\n        }\\n    }\\n\\n    /**\\n    * @dev Set the resolving address of an app instance or base implementation\\n    * @notice Set the resolving address of `_appId` in namespace `_namespace` to `_app`\\n    * @param _namespace App namespace to use\\n    * @param _appId Identifier for app\\n    * @param _app Address of the app instance or base implementation\\n    * @return ID of app\\n    */\\n    function setApp(bytes32 _namespace, bytes32 _appId, address _app)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(_namespace, _appId))\\n    {\\n        _setApp(_namespace, _appId, _app);\\n    }\\n\\n    /**\\n    * @dev Set the default vault id for the escape hatch mechanism\\n    * @param _recoveryVaultAppId Identifier of the recovery vault app\\n    */\\n    function setRecoveryVaultAppId(bytes32 _recoveryVaultAppId)\\n        public\\n        auth(APP_MANAGER_ROLE, arr(KERNEL_APP_ADDR_NAMESPACE, _recoveryVaultAppId))\\n    {\\n        recoveryVaultAppId = _recoveryVaultAppId;\\n    }\\n\\n    // External access to default app id and namespace constants to mimic default getters for constants\\n    /* solium-disable function-order, mixedcase */\\n    function CORE_NAMESPACE() external pure returns (bytes32) { return KERNEL_CORE_NAMESPACE; }\\n    function APP_BASES_NAMESPACE() external pure returns (bytes32) { return KERNEL_APP_BASES_NAMESPACE; }\\n    function APP_ADDR_NAMESPACE() external pure returns (bytes32) { return KERNEL_APP_ADDR_NAMESPACE; }\\n    function KERNEL_APP_ID() external pure returns (bytes32) { return KERNEL_CORE_APP_ID; }\\n    function DEFAULT_ACL_APP_ID() external pure returns (bytes32) { return KERNEL_DEFAULT_ACL_APP_ID; }\\n    /* solium-enable function-order, mixedcase */\\n\\n    /**\\n    * @dev Get the address of an app instance or base implementation\\n    * @param _namespace App namespace to use\\n    * @param _appId Identifier for app\\n    * @return Address of the app\\n    */\\n    function getApp(bytes32 _namespace, bytes32 _appId) public view returns (address) {\\n        return apps[_namespace][_appId];\\n    }\\n\\n    /**\\n    * @dev Get the address of the recovery Vault instance (to recover funds)\\n    * @return Address of the Vault\\n    */\\n    function getRecoveryVault() public view returns (address) {\\n        return apps[KERNEL_APP_ADDR_NAMESPACE][recoveryVaultAppId];\\n    }\\n\\n    /**\\n    * @dev Get the installed ACL app\\n    * @return ACL app\\n    */\\n    function acl() public view returns (IACL) {\\n        return IACL(getApp(KERNEL_APP_ADDR_NAMESPACE, KERNEL_DEFAULT_ACL_APP_ID));\\n    }\\n\\n    /**\\n    * @dev Function called by apps to check ACL on kernel or to check permission status\\n    * @param _who Sender of the original call\\n    * @param _where Address of the app\\n    * @param _what Identifier for a group of actions in app\\n    * @param _how Extra data for ACL auth\\n    * @return Boolean indicating whether the ACL allows the role or not.\\n    *         Always returns false if the kernel hasn't been initialized yet.\\n    */\\n    function hasPermission(address _who, address _where, bytes32 _what, bytes _how) public view returns (bool) {\\n        IACL defaultAcl = acl();\\n        return address(defaultAcl) != address(0) && // Poor man's initialization check (saves gas)\\n            defaultAcl.hasPermission(_who, _where, _what, _how);\\n    }\\n\\n    function _setApp(bytes32 _namespace, bytes32 _appId, address _app) internal {\\n        require(isContract(_app), ERROR_APP_NOT_CONTRACT);\\n        apps[_namespace][_appId] = _app;\\n        emit SetApp(_namespace, _appId, _app);\\n    }\\n\\n    function _setAppIfNew(bytes32 _namespace, bytes32 _appId, address _app) internal {\\n        address app = getApp(_namespace, _appId);\\n        if (app != address(0)) {\\n            // The only way to set an app is if it passes the isContract check, so no need to check it again\\n            require(app == _app, ERROR_INVALID_APP_CHANGE);\\n        } else {\\n            _setApp(_namespace, _appId, _app);\\n        }\\n    }\\n\\n    modifier auth(bytes32 _role, uint256[] memory _params) {\\n        require(\\n            hasPermission(msg.sender, address(this), _role, ConversionHelpers.dangerouslyCastUintArrayToBytes(_params)),\\n            ERROR_AUTH_FAILED\\n        );\\n        _;\\n    }\\n}\\n\",\"keccak256\":\"0x117b1e169c984a4ad9070d5d7784bf91f8b1b16d3e695694cde253181b5ade3e\"},\"contracts/kernel/KernelConstants.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ncontract KernelAppIds {\\n    /* Hardcoded constants to save gas\\n    bytes32 internal constant KERNEL_CORE_APP_ID = apmNamehash(\\\"kernel\\\");\\n    bytes32 internal constant KERNEL_DEFAULT_ACL_APP_ID = apmNamehash(\\\"acl\\\");\\n    bytes32 internal constant KERNEL_DEFAULT_VAULT_APP_ID = apmNamehash(\\\"vault\\\");\\n    */\\n    bytes32 internal constant KERNEL_CORE_APP_ID = 0x3b4bf6bf3ad5000ecf0f989d5befde585c6860fea3e574a4fab4c49d1c177d9c;\\n    bytes32 internal constant KERNEL_DEFAULT_ACL_APP_ID = 0xe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a;\\n    bytes32 internal constant KERNEL_DEFAULT_VAULT_APP_ID = 0x7e852e0fcfce6551c13800f1e7476f982525c2b5277ba14b24339c68416336d1;\\n}\\n\\n\\ncontract KernelNamespaceConstants {\\n    /* Hardcoded constants to save gas\\n    bytes32 internal constant KERNEL_CORE_NAMESPACE = keccak256(\\\"core\\\");\\n    bytes32 internal constant KERNEL_APP_BASES_NAMESPACE = keccak256(\\\"base\\\");\\n    bytes32 internal constant KERNEL_APP_ADDR_NAMESPACE = keccak256(\\\"app\\\");\\n    */\\n    bytes32 internal constant KERNEL_CORE_NAMESPACE = 0xc681a85306374a5ab27f0bbc385296a54bcd314a1948b6cf61c4ea1bc44bb9f8;\\n    bytes32 internal constant KERNEL_APP_BASES_NAMESPACE = 0xf1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f;\\n    bytes32 internal constant KERNEL_APP_ADDR_NAMESPACE = 0xd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb;\\n}\\n\",\"keccak256\":\"0x817f66cfc7bfafd19a4e6b1344850c5f7b72e39a1073fe862efebe608a07c0d3\"},\"contracts/kernel/KernelStorage.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\n\\ncontract KernelStorage {\\n    // namespace => app id => address\\n    mapping (bytes32 => mapping (bytes32 => address)) public apps;\\n    bytes32 public recoveryVaultAppId;\\n}\\n\",\"keccak256\":\"0x682eac86f7a617281098c15cadbaeec72a50cbe49101861a1454519df1718a4c\"},\"contracts/lib/misc/ERCProxy.sol\":{\"content\":\"/*\\n * SPDX-License-Identifier:    MIT\\n */\\n\\npragma solidity ^0.4.24;\\n\\n\\ncontract ERCProxy {\\n    uint256 internal constant FORWARDING = 1;\\n    uint256 internal constant UPGRADEABLE = 2;\\n\\n    function proxyType() public pure returns (uint256 proxyTypeId);\\n    function implementation() public view returns (address codeAddr);\\n}\\n\",\"keccak256\":\"0xa976d3230857b541c68222d1dc50d8805c598897ae959f7b2d2ab5df35d85ae2\"},\"contracts/lib/token/ERC20.sol\":{\"content\":\"// See https://github.com/OpenZeppelin/openzeppelin-solidity/blob/a9f910d34f0ab33a1ae5e714f69f9596a02b4d91/contracts/token/ERC20/ERC20.sol\\n\\npragma solidity ^0.4.24;\\n\\n\\n/**\\n * @title ERC20 interface\\n * @dev see https://github.com/ethereum/EIPs/issues/20\\n */\\ncontract ERC20 {\\n    function totalSupply() public view returns (uint256);\\n\\n    function balanceOf(address _who) public view returns (uint256);\\n\\n    function allowance(address _owner, address _spender)\\n        public view returns (uint256);\\n\\n    function transfer(address _to, uint256 _value) public returns (bool);\\n\\n    function approve(address _spender, uint256 _value)\\n        public returns (bool);\\n\\n    function transferFrom(address _from, address _to, uint256 _value)\\n        public returns (bool);\\n\\n    event Transfer(\\n        address indexed from,\\n        address indexed to,\\n        uint256 value\\n    );\\n\\n    event Approval(\\n        address indexed owner,\\n        address indexed spender,\\n        uint256 value\\n    );\\n}\\n\",\"keccak256\":\"0xa2e319fde92f9e70912f09bf6e99bbf8b9b798961d54ffcba59d347d37bde1b7\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b506040516020806200318f833981016040525180156200003e576200003e64010000000062000045810204565b5062000263565b620000586401000000006200014d810204565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a454400000000000000006020820152901562000134576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b83811015620000f8578181015183820152602001620000de565b50505050905090810190601f168015620001265780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b506200014b6000196401000000006200017c810204565b565b6000620001776000805160206200316f83398151915264010000000062001dcf6200025b82021704565b905090565b6200018f6401000000006200014d810204565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a45440000000000000000602082015290156200022e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620000f8578181015183820152602001620000de565b50620002586000805160206200316f833981519152826401000000006200203b6200025f82021704565b50565b5490565b9055565b612efc80620002736000396000f300608060405260043610620001865763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630803fac081146200018b5780631113ed0d14620001b7578063178e607914620001e157806332f0a3b514620001f9578063397edd41146200023a5780634558850c14620002b7578063485cc95514620002d5578063756f6049146200030e5780637e7db6e1146200032657806380cd5ac3146200035757806386070cfe146200038b5780638b3dd74914620003a35780638c61757d14620003bb5780638ea8dc9d14620003d6578063958fde8214620003ee5780639d4941d81462000422578063ae5b25401462000453578063be00bbd8146200048a578063c050a7a614620004a8578063d162f8b01462000525578063db8a61d4146200059e578063de28735914620005b6578063de4796ed14620005ce578063e156a8f314620005e6578063e8187ff0146200061a578063ede658b01462000632578063fdef910614620006ab578063ff289fc5146200072a575b600080fd5b3480156200019857600080fd5b50620001a36200075e565b604080519115158252519081900360200190f35b348015620001c457600080fd5b50620001cf6200078c565b60408051918252519081900360200190f35b348015620001ee57600080fd5b50620001cf620007b0565b3480156200020657600080fd5b5062000211620007d4565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156200024757600080fd5b50604080516020600460443581810135601f810184900484028501840190955284845262000211948235946024803573ffffffffffffffffffffffffffffffffffffffff16953695946064949201919081908401838280828437509497505050509135151592506200081e915050565b348015620002c457600080fd5b5062000211600435602435620009dd565b348015620002e257600080fd5b506200030c73ffffffffffffffffffffffffffffffffffffffff6004358116906024351662000a0d565b005b3480156200031b57600080fd5b50620001cf62000c6c565b3480156200033357600080fd5b50620001a373ffffffffffffffffffffffffffffffffffffffff6004351662000c90565b3480156200036457600080fd5b506200021160043573ffffffffffffffffffffffffffffffffffffffff6024351662000c96565b3480156200039857600080fd5b50620001cf62000dc0565b348015620003b057600080fd5b50620001cf62000dc6565b348015620003c857600080fd5b506200030c60043562000df8565b348015620003e357600080fd5b50620001cf62000eff565b348015620003fb57600080fd5b506200021160043573ffffffffffffffffffffffffffffffffffffffff6024351662000f23565b3480156200042f57600080fd5b506200030c73ffffffffffffffffffffffffffffffffffffffff6004351662001044565b3480156200046057600080fd5b506200030c60043560243573ffffffffffffffffffffffffffffffffffffffff604435166200137c565b3480156200049757600080fd5b506200021160043560243562001470565b348015620004b557600080fd5b50604080516020600460443581810135601f810184900484028501840190955284845262000211948235946024803573ffffffffffffffffffffffffffffffffffffffff1695369594606494920191908190840183828082843750949750505050913515159250620014a1915050565b3480156200053257600080fd5b50604080516020600460443581810135601f81018490048402850184019095528484526200021194823573ffffffffffffffffffffffffffffffffffffffff16946024803595369594606494920191908190840183828082843750949750620015d89650505050505050565b348015620005ab57600080fd5b50620001cf620016fd565b348015620005c357600080fd5b506200021162001721565b348015620005db57600080fd5b50620001a36200176f565b348015620005f357600080fd5b506200021173ffffffffffffffffffffffffffffffffffffffff60043516602435620017a2565b3480156200062757600080fd5b50620001cf620017c8565b3480156200063f57600080fd5b50604080516020600460443581810135601f81018490048402850184019095528484526200021194823573ffffffffffffffffffffffffffffffffffffffff16946024803595369594606494920191908190840183828082843750949750620017ec9650505050505050565b348015620006b857600080fd5b50604080516020601f606435600481810135928301849004840285018401909552818452620001a39473ffffffffffffffffffffffffffffffffffffffff8135811695602480359092169560443595369560849401918190840183828082843750949750620019119650505050505050565b3480156200073757600080fd5b506200021173ffffffffffffffffffffffffffffffffffffffff6004351660243562001a6e565b6000806200076b62000dc6565b90508015801590620007865750806200078362001a8d565b10155b91505090565b7f3b4bf6bf3ad5000ecf0f989d5befde585c6860fea3e574a4fab4c49d1c177d9c90565b7fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb90565b60015460009081527f9e3eae70920eeef6013879bf9155b985893698c145361c31365929723678b257602052604090205473ffffffffffffffffffffffffffffffffffffffff1690565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd06200086d7ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8762001a91565b620008853330846200087f8562001a9f565b62001911565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000962576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b83811015620009265781810151838201526020016200090c565b50505050905090810190601f168015620009545780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50620009907ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f888862001aa9565b6200099d308887620017ec565b92508315620009d357620009d37fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb88856200137c565b5050949350505050565b600060208181529281526040808220909352908152205473ffffffffffffffffffffffffffffffffffffffff1681565b600062000a1962000dc6565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a454400000000000000006020820152901562000ab8576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062000ac362001ba9565b62000b107ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a8562001c91565b62000b3c307fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a620017a2565b90508073ffffffffffffffffffffffffffffffffffffffff1663c4d66de8836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801562000bda57600080fd5b505af115801562000bef573d6000803e3d6000fd5b5062000c4392507fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb91507fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a90508362001c91565b50507f7e852e0fcfce6551c13800f1e7476f982525c2b5277ba14b24339c68416336d160015550565b7fc681a85306374a5ab27f0bbc385296a54bcd314a1948b6cf61c4ea1bc44bb9f890565b50600190565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000ce57ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8562001a91565b62000cf73330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000d97576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506040805160008082526020820190925262000db791879187916200081e565b95945050505050565b60015481565b600062000df37febb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e62001dcf565b905090565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000e457fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb8362001a91565b62000e573330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000ef7576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b505050600155565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd081565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000f727ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8562001a91565b62000f843330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562001024576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506040805160008082526020820190925262000db79187918791620014a1565b6000806000620010548462000c90565b60408051808201909152601281527f5245434f5645525f444953414c4c4f57454400000000000000000000000000006020820152901515620010f4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b50620010ff620007d4565b92506200110c8362001dd3565b60408051808201909152601a81527f5245434f5645525f5641554c545f4e4f545f434f4e54524143540000000000006020820152901515620011ac576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5073ffffffffffffffffffffffffffffffffffffffff841615156200121a576040513031925073ffffffffffffffffffffffffffffffffffffffff84169083156108fc029084906000818181858888f1935050505015801562001213573d6000803e3d6000fd5b5062001311565b50826200124473ffffffffffffffffffffffffffffffffffffffff82163063ffffffff62001e0f16565b91506200126f73ffffffffffffffffffffffffffffffffffffffff8216848463ffffffff62001f4d16565b60408051808201909152601d81527f5245434f5645525f544f4b454e5f5452414e534645525f4641494c454400000060208201529015156200130f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b505b8373ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167f596caf56044b55fb8c4ca640089bbc2b63cae3e978b851f5745cbb7c5b288e02846040518082815260200191505060405180910390a350505050565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd0620013a9848462001a91565b620013bb3330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c4544000000000000000000000000000060208201529015156200145b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506200146985858562001c91565b5050505050565b60009182526020828152604080842092845291905290205473ffffffffffffffffffffffffffffffffffffffff1690565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd0620014f07ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8762001a91565b620015023330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c454400000000000000000000000000006020820152901515620015a2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b50620015d07ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f888862001aa9565b6200099d3088875b600080848484620015e8620020c4565b73ffffffffffffffffffffffffffffffffffffffff8416815260208082018490526060604083018181528451918401919091528351909160808401919085019080838360005b83811015620016485781810151838201526020016200162e565b50505050905090810190601f168015620016765780820380516001836020036101000a031916815260200191505b50945050505050604051809103906000f0801580156200169a573d6000803e3d6000fd5b506040805173ffffffffffffffffffffffffffffffffffffffff831681526000602082015280820187905290519192507fd880e726dced8808d727f02dd0e6fdd3a945b24bfee77e13367bcbe61ddbaf47919081900360600190a1949350505050565b7ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f90565b600062000df37fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a62001470565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6200179c62000dc6565b14905090565b60408051600080825260208201909252620017c19084908490620017ec565b9392505050565b7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a90565b600080848484620017fc620020d5565b73ffffffffffffffffffffffffffffffffffffffff8416815260208082018490526060604083018181528451918401919091528351909160808401919085019080838360005b838110156200185c57818101518382015260200162001842565b50505050905090810190601f1680156200188a5780820380516001836020036101000a031916815260200191505b50945050505050604051809103906000f080158015620018ae573d6000803e3d6000fd5b506040805173ffffffffffffffffffffffffffffffffffffffff831681526001602082015280820187905290519192507fd880e726dced8808d727f02dd0e6fdd3a945b24bfee77e13367bcbe61ddbaf47919081900360600190a1949350505050565b6000806200191e62001721565b905073ffffffffffffffffffffffffffffffffffffffff81161580159062001a6457506040517ffdef910600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff878116600483019081528782166024840152604483018790526080606484019081528651608485015286519285169363fdef9106938b938b938b938b9360a490910190602085019080838360005b83811015620019e4578181015183820152602001620019ca565b50505050905090810190601f16801562001a125780820380516001836020036101000a031916815260200191505b5095505050505050602060405180830381600087803b15801562001a3557600080fd5b505af115801562001a4a573d6000803e3d6000fd5b505050506040513d602081101562001a6157600080fd5b50515b9695505050505050565b60408051600080825260208201909252620017c19084908490620015d8565b4390565b6060620017c1838362001fde565b8051602002815290565b600062001ab7848462001470565b905073ffffffffffffffffffffffffffffffffffffffff81161562001b965760408051808201909152601981527f4b45524e454c5f494e56414c49445f4150505f4348414e474500000000000000602082015273ffffffffffffffffffffffffffffffffffffffff8281169084161462001b8f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062001ba3565b62001ba384848462001c91565b50505050565b62001bb362000dc6565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a454400000000000000006020820152901562001c52576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062001c8f62001c6162001a8d565b7febb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e9063ffffffff6200203b16565b565b62001c9c8162001dd3565b60408051808201909152601781527f4b45524e454c5f4150505f4e4f545f434f4e5452414354000000000000000000602082015290151562001d3c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5060008381526020818152604080832085845282529182902080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff851690811790915582519081529151849286927f2ec1ae0a449b7ae354b9dacfb3ade6b6332ba26b7fcbb935835fa39dd7263b2392918290030190a3505050565b5490565b60008073ffffffffffffffffffffffffffffffffffffffff8316151562001dfe576000915062001e09565b823b90506000811191505b50919050565b6040805173ffffffffffffffffffffffffffffffffffffffff83166024808301919091528251808303909101815260449091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167f70a0823100000000000000000000000000000000000000000000000000000000179052600090818062001e9e86846200203f565b60408051808201909152601c81527f534146455f4552435f32305f42414c414e43455f5245564552544544000000006020820152919350915082151562001f43576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5095945050505050565b6040805173ffffffffffffffffffffffffffffffffffffffff8416602482015260448082018490528251808303909101815260649091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fa9059cbb0000000000000000000000000000000000000000000000000000000017905260009062000db7858262002071565b6040805160028082526060808301845292602083019080388339019050509050828160008151811015156200200f57fe5b6020908102909101015280518290829060019081106200202b57fe5b6020908102909101015292915050565b9055565b6000806000806040516020818751602089018a5afa925060008311156200206557805191505b50909590945092505050565b6000806040516020818551602087016000895af16000811115620020ba573d8015620020a65760208114620020b057620020b8565b60019350620020b8565b600183511493505b505b5090949350505050565b6040516106fd80620020e783390190565b6040516106ed80620027e4833901905600608060405234801561001057600080fd5b506040516106fd3803806106fd8339810160409081528151602083015191830151909201828282600061004b8464010000000061017a810204565b61005d836401000000006101a2810204565b61006f836401000000006101d9810204565b90506000825111156101185761008d816401000000006102a9810204565b151561009857600080fd5b80600160a060020a03168260405180828051906020019080838360005b838110156100cd5781810151838201526020016100b5565b50505050905090810190601f1680156100fa5780820380516001836020036101000a031916815260200191505b50915050600060405180830381855af4915050151561011857600080fd5b50505050610145610137836101d9640100000000026401000000009004565b6401000000006102d6810204565b6101676101596401000000006102fb810204565b6401000000006102a9810204565b151561017257600080fd5b505050610354565b61019f6000805160206106bd8339815191528264010000000061032661032682021704565b50565b61019f7fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b8264010000000061032661032682021704565b60006101ec64010000000061032a810204565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f6004820152602481018590529051600160a060020a03929092169163be00bbd8916044808201926020929091908290030181600087803b15801561027757600080fd5b505af115801561028b573d6000803e3d6000fd5b505050506040513d60208110156102a157600080fd5b505192915050565b600080600160a060020a03831615156102c557600091506102d0565b823b90506000811191505b50919050565b61019f6000805160206106dd8339815191528264010000000061032661032682021704565b60006103216000805160206106dd83398151915264010000000061031e61035082021704565b905090565b9055565b60006103216000805160206106bd83398151915264010000000061031e61035082021704565b5490565b61035a806103636000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634555d5c9811461012b57806348a0c8dd146101525780635c60da1b1461017b57806380afdea8146101b9578063d4aae0c4146101ce575b6127107f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6000825a10156100e15760003411361583541616156100dc576040513381523460208201527f15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1604082a1005b600080fd5b6100e96101e3565b9050610126816000368080601f016020809104026020016040519081016040528093929190818152602001838380828437506101f2945050505050565b505050005b34801561013757600080fd5b50610140610233565b60408051918252519081900360200190f35b34801561015e57600080fd5b50610167610238565b604080519115158252519081900360200190f35b34801561018757600080fd5b506101906101e3565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101c557600080fd5b50610140610263565b3480156101da57600080fd5b5061019061028e565b60006101ed6102b9565b905090565b60006101fd836102e4565b151561020857600080fd5b612710905060008083516020850186855a03f43d604051816000823e82801561022f578282f35b8282fd5b600190565b60006101ed7f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea61031e565b60006101ed7fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b61031e565b60006101ed7f4172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137b61031e565b60006101ed7fdee64df20d65e53d7f51cb6ab6d921a0a6a638a91e942e1d8d02df28e31c038e61031e565b60008073ffffffffffffffffffffffffffffffffffffffff8316151561030d5760009150610318565b823b90506000811191505b50919050565b5490565b5490565b9055565b90555600a165627a7a723058206231afdea20ac283aafb3121a8668f4204719829e8df036248fbd9f9d2e2c93f00294172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137bdee64df20d65e53d7f51cb6ab6d921a0a6a638a91e942e1d8d02df28e31c038e608060405234801561001057600080fd5b506040516106ed3803806106ed8339810160409081528151602083015191830151909201828282600061004b84640100000000610124810204565b61005d8364010000000061014c810204565b61006f83640100000000610183810204565b90506000825111156101185761008d81640100000000610253810204565b151561009857600080fd5b80600160a060020a03168260405180828051906020019080838360005b838110156100cd5781810151838201526020016100b5565b50505050905090810190601f1680156100fa5780820380516001836020036101000a031916815260200191505b50915050600060405180830381855af4915050151561011857600080fd5b505050505050506102b3565b6101496000805160206106cd833981519152826401000000006103d761028082021704565b50565b6101497fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b826401000000006103d761028082021704565b6000610196640100000000610284810204565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f6004820152602481018590529051600160a060020a03929092169163be00bbd8916044808201926020929091908290030181600087803b15801561022157600080fd5b505af1158015610235573d6000803e3d6000fd5b505050506040513d602081101561024b57600080fd5b505192915050565b600080600160a060020a038316151561026f576000915061027a565b823b90506000811191505b50919050565b9055565b60006102aa6000805160206106cd8339815191526401000000006103cf6102af82021704565b905090565b5490565b61040b806102c26000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634555d5c9811461012b57806348a0c8dd146101525780635c60da1b1461017b57806380afdea8146101b9578063d4aae0c4146101ce575b6127107f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6000825a10156100e15760003411361583541616156100dc576040513381523460208201527f15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1604082a1005b600080fd5b6100e96101e3565b9050610126816000368080601f016020809104026020016040519081016040528093929190818152602001838380828437506101fa945050505050565b505050005b34801561013757600080fd5b5061014061023b565b60408051918252519081900360200190f35b34801561015e57600080fd5b50610167610240565b604080519115158252519081900360200190f35b34801561018757600080fd5b506101906101e3565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101c557600080fd5b5061014061026b565b3480156101da57600080fd5b50610190610296565b60006101f56101f061026b565b6102c1565b905090565b600061020583610395565b151561021057600080fd5b612710905060008083516020850186855a03f43d604051816000823e828015610237578282f35b8282fd5b600290565b60006101f57f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6103cf565b60006101f57fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b6103cf565b60006101f57f4172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137b6103cf565b60006102cb610296565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f600482015260248101859052905173ffffffffffffffffffffffffffffffffffffffff929092169163be00bbd8916044808201926020929091908290030181600087803b15801561036357600080fd5b505af1158015610377573d6000803e3d6000fd5b505050506040513d602081101561038d57600080fd5b505192915050565b60008073ffffffffffffffffffffffffffffffffffffffff831615156103be57600091506103c9565b823b90506000811191505b50919050565b5490565b5490565b9055565b90555600a165627a7a72305820ccb87c31c8ca63882b67f6a59b0f4d5fb3ca9083f80b6652712dcaba9aab0e2b00294172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137ba165627a7a7230582092afe40eb96c3dd9236361d29359088db13c5b2518a347a7376147002374ea7b0029ebb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e",
+  "deployedBytecode": "0x608060405260043610620001865763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630803fac081146200018b5780631113ed0d14620001b7578063178e607914620001e157806332f0a3b514620001f9578063397edd41146200023a5780634558850c14620002b7578063485cc95514620002d5578063756f6049146200030e5780637e7db6e1146200032657806380cd5ac3146200035757806386070cfe146200038b5780638b3dd74914620003a35780638c61757d14620003bb5780638ea8dc9d14620003d6578063958fde8214620003ee5780639d4941d81462000422578063ae5b25401462000453578063be00bbd8146200048a578063c050a7a614620004a8578063d162f8b01462000525578063db8a61d4146200059e578063de28735914620005b6578063de4796ed14620005ce578063e156a8f314620005e6578063e8187ff0146200061a578063ede658b01462000632578063fdef910614620006ab578063ff289fc5146200072a575b600080fd5b3480156200019857600080fd5b50620001a36200075e565b604080519115158252519081900360200190f35b348015620001c457600080fd5b50620001cf6200078c565b60408051918252519081900360200190f35b348015620001ee57600080fd5b50620001cf620007b0565b3480156200020657600080fd5b5062000211620007d4565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156200024757600080fd5b50604080516020600460443581810135601f810184900484028501840190955284845262000211948235946024803573ffffffffffffffffffffffffffffffffffffffff16953695946064949201919081908401838280828437509497505050509135151592506200081e915050565b348015620002c457600080fd5b5062000211600435602435620009dd565b348015620002e257600080fd5b506200030c73ffffffffffffffffffffffffffffffffffffffff6004358116906024351662000a0d565b005b3480156200031b57600080fd5b50620001cf62000c6c565b3480156200033357600080fd5b50620001a373ffffffffffffffffffffffffffffffffffffffff6004351662000c90565b3480156200036457600080fd5b506200021160043573ffffffffffffffffffffffffffffffffffffffff6024351662000c96565b3480156200039857600080fd5b50620001cf62000dc0565b348015620003b057600080fd5b50620001cf62000dc6565b348015620003c857600080fd5b506200030c60043562000df8565b348015620003e357600080fd5b50620001cf62000eff565b348015620003fb57600080fd5b506200021160043573ffffffffffffffffffffffffffffffffffffffff6024351662000f23565b3480156200042f57600080fd5b506200030c73ffffffffffffffffffffffffffffffffffffffff6004351662001044565b3480156200046057600080fd5b506200030c60043560243573ffffffffffffffffffffffffffffffffffffffff604435166200137c565b3480156200049757600080fd5b506200021160043560243562001470565b348015620004b557600080fd5b50604080516020600460443581810135601f810184900484028501840190955284845262000211948235946024803573ffffffffffffffffffffffffffffffffffffffff1695369594606494920191908190840183828082843750949750505050913515159250620014a1915050565b3480156200053257600080fd5b50604080516020600460443581810135601f81018490048402850184019095528484526200021194823573ffffffffffffffffffffffffffffffffffffffff16946024803595369594606494920191908190840183828082843750949750620015d89650505050505050565b348015620005ab57600080fd5b50620001cf620016fd565b348015620005c357600080fd5b506200021162001721565b348015620005db57600080fd5b50620001a36200176f565b348015620005f357600080fd5b506200021173ffffffffffffffffffffffffffffffffffffffff60043516602435620017a2565b3480156200062757600080fd5b50620001cf620017c8565b3480156200063f57600080fd5b50604080516020600460443581810135601f81018490048402850184019095528484526200021194823573ffffffffffffffffffffffffffffffffffffffff16946024803595369594606494920191908190840183828082843750949750620017ec9650505050505050565b348015620006b857600080fd5b50604080516020601f606435600481810135928301849004840285018401909552818452620001a39473ffffffffffffffffffffffffffffffffffffffff8135811695602480359092169560443595369560849401918190840183828082843750949750620019119650505050505050565b3480156200073757600080fd5b506200021173ffffffffffffffffffffffffffffffffffffffff6004351660243562001a6e565b6000806200076b62000dc6565b90508015801590620007865750806200078362001a8d565b10155b91505090565b7f3b4bf6bf3ad5000ecf0f989d5befde585c6860fea3e574a4fab4c49d1c177d9c90565b7fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb90565b60015460009081527f9e3eae70920eeef6013879bf9155b985893698c145361c31365929723678b257602052604090205473ffffffffffffffffffffffffffffffffffffffff1690565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd06200086d7ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8762001a91565b620008853330846200087f8562001a9f565b62001911565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000962576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b83811015620009265781810151838201526020016200090c565b50505050905090810190601f168015620009545780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50620009907ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f888862001aa9565b6200099d308887620017ec565b92508315620009d357620009d37fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb88856200137c565b5050949350505050565b600060208181529281526040808220909352908152205473ffffffffffffffffffffffffffffffffffffffff1681565b600062000a1962000dc6565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a454400000000000000006020820152901562000ab8576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062000ac362001ba9565b62000b107ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a8562001c91565b62000b3c307fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a620017a2565b90508073ffffffffffffffffffffffffffffffffffffffff1663c4d66de8836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b15801562000bda57600080fd5b505af115801562000bef573d6000803e3d6000fd5b5062000c4392507fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb91507fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a90508362001c91565b50507f7e852e0fcfce6551c13800f1e7476f982525c2b5277ba14b24339c68416336d160015550565b7fc681a85306374a5ab27f0bbc385296a54bcd314a1948b6cf61c4ea1bc44bb9f890565b50600190565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000ce57ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8562001a91565b62000cf73330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000d97576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506040805160008082526020820190925262000db791879187916200081e565b95945050505050565b60015481565b600062000df37febb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e62001dcf565b905090565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000e457fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb8362001a91565b62000e573330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562000ef7576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b505050600155565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd081565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd062000f727ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8562001a91565b62000f843330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c45440000000000000000000000000000602082015290151562001024576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506040805160008082526020820190925262000db79187918791620014a1565b6000806000620010548462000c90565b60408051808201909152601281527f5245434f5645525f444953414c4c4f57454400000000000000000000000000006020820152901515620010f4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b50620010ff620007d4565b92506200110c8362001dd3565b60408051808201909152601a81527f5245434f5645525f5641554c545f4e4f545f434f4e54524143540000000000006020820152901515620011ac576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5073ffffffffffffffffffffffffffffffffffffffff841615156200121a576040513031925073ffffffffffffffffffffffffffffffffffffffff84169083156108fc029084906000818181858888f1935050505015801562001213573d6000803e3d6000fd5b5062001311565b50826200124473ffffffffffffffffffffffffffffffffffffffff82163063ffffffff62001e0f16565b91506200126f73ffffffffffffffffffffffffffffffffffffffff8216848463ffffffff62001f4d16565b60408051808201909152601d81527f5245434f5645525f544f4b454e5f5452414e534645525f4641494c454400000060208201529015156200130f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b505b8373ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167f596caf56044b55fb8c4ca640089bbc2b63cae3e978b851f5745cbb7c5b288e02846040518082815260200191505060405180910390a350505050565b7fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd0620013a9848462001a91565b620013bb3330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c4544000000000000000000000000000060208201529015156200145b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b506200146985858562001c91565b5050505050565b60009182526020828152604080842092845291905290205473ffffffffffffffffffffffffffffffffffffffff1690565b60007fb6d92708f3d4817afc106147d969e229ced5c46e65e0a5002a0d391287762bd0620014f07ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f8762001a91565b620015023330846200087f8562001a9f565b60408051808201909152601281527f4b45524e454c5f415554485f4641494c454400000000000000000000000000006020820152901515620015a2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b50620015d07ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f888862001aa9565b6200099d3088875b600080848484620015e8620020c4565b73ffffffffffffffffffffffffffffffffffffffff8416815260208082018490526060604083018181528451918401919091528351909160808401919085019080838360005b83811015620016485781810151838201526020016200162e565b50505050905090810190601f168015620016765780820380516001836020036101000a031916815260200191505b50945050505050604051809103906000f0801580156200169a573d6000803e3d6000fd5b506040805173ffffffffffffffffffffffffffffffffffffffff831681526000602082015280820187905290519192507fd880e726dced8808d727f02dd0e6fdd3a945b24bfee77e13367bcbe61ddbaf47919081900360600190a1949350505050565b7ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f90565b600062000df37fd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a62001470565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6200179c62000dc6565b14905090565b60408051600080825260208201909252620017c19084908490620017ec565b9392505050565b7fe3262375f45a6e2026b7e7b18c2b807434f2508fe1a2a3dfb493c7df8f4aad6a90565b600080848484620017fc620020d5565b73ffffffffffffffffffffffffffffffffffffffff8416815260208082018490526060604083018181528451918401919091528351909160808401919085019080838360005b838110156200185c57818101518382015260200162001842565b50505050905090810190601f1680156200188a5780820380516001836020036101000a031916815260200191505b50945050505050604051809103906000f080158015620018ae573d6000803e3d6000fd5b506040805173ffffffffffffffffffffffffffffffffffffffff831681526001602082015280820187905290519192507fd880e726dced8808d727f02dd0e6fdd3a945b24bfee77e13367bcbe61ddbaf47919081900360600190a1949350505050565b6000806200191e62001721565b905073ffffffffffffffffffffffffffffffffffffffff81161580159062001a6457506040517ffdef910600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff878116600483019081528782166024840152604483018790526080606484019081528651608485015286519285169363fdef9106938b938b938b938b9360a490910190602085019080838360005b83811015620019e4578181015183820152602001620019ca565b50505050905090810190601f16801562001a125780820380516001836020036101000a031916815260200191505b5095505050505050602060405180830381600087803b15801562001a3557600080fd5b505af115801562001a4a573d6000803e3d6000fd5b505050506040513d602081101562001a6157600080fd5b50515b9695505050505050565b60408051600080825260208201909252620017c19084908490620015d8565b4390565b6060620017c1838362001fde565b8051602002815290565b600062001ab7848462001470565b905073ffffffffffffffffffffffffffffffffffffffff81161562001b965760408051808201909152601981527f4b45524e454c5f494e56414c49445f4150505f4348414e474500000000000000602082015273ffffffffffffffffffffffffffffffffffffffff8281169084161462001b8f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062001ba3565b62001ba384848462001c91565b50505050565b62001bb362000dc6565b60408051808201909152601881527f494e49545f414c52454144595f494e495449414c495a454400000000000000006020820152901562001c52576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5062001c8f62001c6162001a8d565b7febb05b386a8d34882b8711d156f463690983dc47815980fb82aeeff1aa43579e9063ffffffff6200203b16565b565b62001c9c8162001dd3565b60408051808201909152601781527f4b45524e454c5f4150505f4e4f545f434f4e5452414354000000000000000000602082015290151562001d3c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5060008381526020818152604080832085845282529182902080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff851690811790915582519081529151849286927f2ec1ae0a449b7ae354b9dacfb3ade6b6332ba26b7fcbb935835fa39dd7263b2392918290030190a3505050565b5490565b60008073ffffffffffffffffffffffffffffffffffffffff8316151562001dfe576000915062001e09565b823b90506000811191505b50919050565b6040805173ffffffffffffffffffffffffffffffffffffffff83166024808301919091528251808303909101815260449091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167f70a0823100000000000000000000000000000000000000000000000000000000179052600090818062001e9e86846200203f565b60408051808201909152601c81527f534146455f4552435f32305f42414c414e43455f5245564552544544000000006020820152919350915082151562001f43576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252838181518152602001915080519060200190808383600083811015620009265781810151838201526020016200090c565b5095945050505050565b6040805173ffffffffffffffffffffffffffffffffffffffff8416602482015260448082018490528251808303909101815260649091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fa9059cbb0000000000000000000000000000000000000000000000000000000017905260009062000db7858262002071565b6040805160028082526060808301845292602083019080388339019050509050828160008151811015156200200f57fe5b6020908102909101015280518290829060019081106200202b57fe5b6020908102909101015292915050565b9055565b6000806000806040516020818751602089018a5afa925060008311156200206557805191505b50909590945092505050565b6000806040516020818551602087016000895af16000811115620020ba573d8015620020a65760208114620020b057620020b8565b60019350620020b8565b600183511493505b505b5090949350505050565b6040516106fd80620020e783390190565b6040516106ed80620027e4833901905600608060405234801561001057600080fd5b506040516106fd3803806106fd8339810160409081528151602083015191830151909201828282600061004b8464010000000061017a810204565b61005d836401000000006101a2810204565b61006f836401000000006101d9810204565b90506000825111156101185761008d816401000000006102a9810204565b151561009857600080fd5b80600160a060020a03168260405180828051906020019080838360005b838110156100cd5781810151838201526020016100b5565b50505050905090810190601f1680156100fa5780820380516001836020036101000a031916815260200191505b50915050600060405180830381855af4915050151561011857600080fd5b50505050610145610137836101d9640100000000026401000000009004565b6401000000006102d6810204565b6101676101596401000000006102fb810204565b6401000000006102a9810204565b151561017257600080fd5b505050610354565b61019f6000805160206106bd8339815191528264010000000061032661032682021704565b50565b61019f7fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b8264010000000061032661032682021704565b60006101ec64010000000061032a810204565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f6004820152602481018590529051600160a060020a03929092169163be00bbd8916044808201926020929091908290030181600087803b15801561027757600080fd5b505af115801561028b573d6000803e3d6000fd5b505050506040513d60208110156102a157600080fd5b505192915050565b600080600160a060020a03831615156102c557600091506102d0565b823b90506000811191505b50919050565b61019f6000805160206106dd8339815191528264010000000061032661032682021704565b60006103216000805160206106dd83398151915264010000000061031e61035082021704565b905090565b9055565b60006103216000805160206106bd83398151915264010000000061031e61035082021704565b5490565b61035a806103636000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634555d5c9811461012b57806348a0c8dd146101525780635c60da1b1461017b57806380afdea8146101b9578063d4aae0c4146101ce575b6127107f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6000825a10156100e15760003411361583541616156100dc576040513381523460208201527f15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1604082a1005b600080fd5b6100e96101e3565b9050610126816000368080601f016020809104026020016040519081016040528093929190818152602001838380828437506101f2945050505050565b505050005b34801561013757600080fd5b50610140610233565b60408051918252519081900360200190f35b34801561015e57600080fd5b50610167610238565b604080519115158252519081900360200190f35b34801561018757600080fd5b506101906101e3565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101c557600080fd5b50610140610263565b3480156101da57600080fd5b5061019061028e565b60006101ed6102b9565b905090565b60006101fd836102e4565b151561020857600080fd5b612710905060008083516020850186855a03f43d604051816000823e82801561022f578282f35b8282fd5b600190565b60006101ed7f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea61031e565b60006101ed7fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b61031e565b60006101ed7f4172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137b61031e565b60006101ed7fdee64df20d65e53d7f51cb6ab6d921a0a6a638a91e942e1d8d02df28e31c038e61031e565b60008073ffffffffffffffffffffffffffffffffffffffff8316151561030d5760009150610318565b823b90506000811191505b50919050565b5490565b5490565b9055565b90555600a165627a7a723058206231afdea20ac283aafb3121a8668f4204719829e8df036248fbd9f9d2e2c93f00294172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137bdee64df20d65e53d7f51cb6ab6d921a0a6a638a91e942e1d8d02df28e31c038e608060405234801561001057600080fd5b506040516106ed3803806106ed8339810160409081528151602083015191830151909201828282600061004b84640100000000610124810204565b61005d8364010000000061014c810204565b61006f83640100000000610183810204565b90506000825111156101185761008d81640100000000610253810204565b151561009857600080fd5b80600160a060020a03168260405180828051906020019080838360005b838110156100cd5781810151838201526020016100b5565b50505050905090810190601f1680156100fa5780820380516001836020036101000a031916815260200191505b50915050600060405180830381855af4915050151561011857600080fd5b505050505050506102b3565b6101496000805160206106cd833981519152826401000000006103d761028082021704565b50565b6101497fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b826401000000006103d761028082021704565b6000610196640100000000610284810204565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f6004820152602481018590529051600160a060020a03929092169163be00bbd8916044808201926020929091908290030181600087803b15801561022157600080fd5b505af1158015610235573d6000803e3d6000fd5b505050506040513d602081101561024b57600080fd5b505192915050565b600080600160a060020a038316151561026f576000915061027a565b823b90506000811191505b50919050565b9055565b60006102aa6000805160206106cd8339815191526401000000006103cf6102af82021704565b905090565b5490565b61040b806102c26000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634555d5c9811461012b57806348a0c8dd146101525780635c60da1b1461017b57806380afdea8146101b9578063d4aae0c4146101ce575b6127107f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6000825a10156100e15760003411361583541616156100dc576040513381523460208201527f15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1604082a1005b600080fd5b6100e96101e3565b9050610126816000368080601f016020809104026020016040519081016040528093929190818152602001838380828437506101fa945050505050565b505050005b34801561013757600080fd5b5061014061023b565b60408051918252519081900360200190f35b34801561015e57600080fd5b50610167610240565b604080519115158252519081900360200190f35b34801561018757600080fd5b506101906101e3565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101c557600080fd5b5061014061026b565b3480156101da57600080fd5b50610190610296565b60006101f56101f061026b565b6102c1565b905090565b600061020583610395565b151561021057600080fd5b612710905060008083516020850186855a03f43d604051816000823e828015610237578282f35b8282fd5b600290565b60006101f57f665fd576fbbe6f247aff98f5c94a561e3f71ec2d3c988d56f12d342396c50cea6103cf565b60006101f57fd625496217aa6a3453eecb9c3489dc5a53e6c67b444329ea2b2cbc9ff547639b6103cf565b60006101f57f4172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137b6103cf565b60006102cb610296565b604080517fbe00bbd80000000000000000000000000000000000000000000000000000000081527ff1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f600482015260248101859052905173ffffffffffffffffffffffffffffffffffffffff929092169163be00bbd8916044808201926020929091908290030181600087803b15801561036357600080fd5b505af1158015610377573d6000803e3d6000fd5b505050506040513d602081101561038d57600080fd5b505192915050565b60008073ffffffffffffffffffffffffffffffffffffffff831615156103be57600091506103c9565b823b90506000811191505b50919050565b5490565b5490565b9055565b90555600a165627a7a72305820ccb87c31c8ca63882b67f6a59b0f4d5fb3ca9083f80b6652712dcaba9aab0e2b00294172f0f7d2289153072b0a6ca36959e0cbe2efc3afe50fc81636caa96338137ba165627a7a7230582092afe40eb96c3dd9236361d29359088db13c5b2518a347a7376147002374ea7b0029",
+  "devdoc": {
+    "methods": {
+      "acl()": {
+        "details": "Get the installed ACL app",
+        "return": "ACL app"
+      },
+      "allowRecoverability(address)": {
+        "details": "By default deriving from AragonApp makes it recoverable",
+        "params": {
+          "token": "Token address that would be recovered"
+        },
+        "return": "bool whether the app allows the recovery"
+      },
+      "getApp(bytes32,bytes32)": {
+        "details": "Get the address of an app instance or base implementation",
+        "params": {
+          "_appId": "Identifier for app",
+          "_namespace": "App namespace to use"
+        },
+        "return": "Address of the app"
+      },
+      "getInitializationBlock()": {
+        "return": "Block number in which the contract was initialized"
+      },
+      "getRecoveryVault()": {
+        "details": "Get the address of the recovery Vault instance (to recover funds)",
+        "return": "Address of the Vault"
+      },
+      "hasInitialized()": {
+        "return": "Whether the contract has been initialized by the time of the current block"
+      },
+      "hasPermission(address,address,bytes32,bytes)": {
+        "details": "Function called by apps to check ACL on kernel or to check permission status",
+        "params": {
+          "_how": "Extra data for ACL auth",
+          "_what": "Identifier for a group of actions in app",
+          "_where": "Address of the app",
+          "_who": "Sender of the original call"
+        },
+        "return": "Boolean indicating whether the ACL allows the role or not.        Always returns false if the kernel hasn't been initialized yet."
+      },
+      "initialize(address,address)": {
+        "details": "Initialize can only be called once. It saves the block number in which it was initialized.",
+        "params": {
+          "_baseAcl": "Address of base ACL app",
+          "_permissionsCreator": "Entity that will be given permission over createPermission"
+        }
+      },
+      "newAppInstance(bytes32,address)": {
+        "details": "Create a new instance of an app linked to this kernel",
+        "params": {
+          "_appBase": "Address of the app's base implementation",
+          "_appId": "Identifier for app"
+        },
+        "return": "AppProxy instance"
+      },
+      "newAppInstance(bytes32,address,bytes,bool)": {
+        "details": "Create a new instance of an app linked to this kernel and set its base     implementation if it was not already set",
+        "params": {
+          "_appBase": "Address of the app's base implementation",
+          "_appId": "Identifier for app",
+          "_initializePayload": "Payload for call made by the proxy during its construction to initialize",
+          "_setDefault": "Whether the app proxy app is the default one.       Useful when the Kernel needs to know of an instance of a particular app,       like Vault for escape hatch mechanism."
+        },
+        "return": "AppProxy instance"
+      },
+      "newAppProxy(address,bytes32)": {
+        "params": {
+          "_appId": "Identifier for app",
+          "_kernel": "App's Kernel reference"
+        },
+        "return": "AppProxyUpgradeable"
+      },
+      "newAppProxy(address,bytes32,bytes)": {
+        "params": {
+          "_appId": "Identifier for app",
+          "_kernel": "App's Kernel reference"
+        },
+        "return": "AppProxyUpgradeable"
+      },
+      "newAppProxyPinned(address,bytes32)": {
+        "params": {
+          "_appId": "Identifier for app",
+          "_kernel": "App's Kernel reference"
+        },
+        "return": "AppProxyPinned"
+      },
+      "newAppProxyPinned(address,bytes32,bytes)": {
+        "params": {
+          "_appId": "Identifier for app",
+          "_initializePayload": "Proxy initialization payload",
+          "_kernel": "App's Kernel reference"
+        },
+        "return": "AppProxyPinned"
+      },
+      "newPinnedAppInstance(bytes32,address)": {
+        "details": "Create a new pinned instance of an app linked to this kernel",
+        "params": {
+          "_appBase": "Address of the app's base implementation",
+          "_appId": "Identifier for app"
+        },
+        "return": "AppProxy instance"
+      },
+      "newPinnedAppInstance(bytes32,address,bytes,bool)": {
+        "details": "Create a new pinned instance of an app linked to this kernel and set     its base implementation if it was not already set",
+        "params": {
+          "_appBase": "Address of the app's base implementation",
+          "_appId": "Identifier for app",
+          "_initializePayload": "Payload for call made by the proxy during its construction to initialize",
+          "_setDefault": "Whether the app proxy app is the default one.       Useful when the Kernel needs to know of an instance of a particular app,       like Vault for escape hatch mechanism."
+        },
+        "return": "AppProxy instance"
+      },
+      "setApp(bytes32,bytes32,address)": {
+        "details": "Set the resolving address of an app instance or base implementation",
+        "params": {
+          "_app": "Address of the app instance or base implementation",
+          "_appId": "Identifier for app",
+          "_namespace": "App namespace to use"
+        },
+        "return": "ID of app"
+      },
+      "setRecoveryVaultAppId(bytes32)": {
+        "details": "Set the default vault id for the escape hatch mechanism",
+        "params": {
+          "_recoveryVaultAppId": "Identifier of the recovery vault app"
+        }
+      },
+      "transferToVault(address)": {
+        "params": {
+          "_token": "Token balance to be sent to recovery vault."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "initialize(address,address)": {
+        "notice": "Initialize this kernel instance along with its ACL and set `_permissionsCreator` as the entity that can create other permissions"
+      },
+      "newAppInstance(bytes32,address)": {
+        "notice": "Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`"
+      },
+      "newAppInstance(bytes32,address,bytes,bool)": {
+        "notice": "Create a new upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`"
+      },
+      "newAppProxy(address,bytes32)": {
+        "notice": "Create a new upgradeable app instance on `_kernel` with identifier `_appId`"
+      },
+      "newAppProxy(address,bytes32,bytes)": {
+        "notice": "Create a new upgradeable app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`"
+      },
+      "newAppProxyPinned(address,bytes32)": {
+        "notice": "Create a new pinned app instance on `_kernel` with identifier `_appId`"
+      },
+      "newAppProxyPinned(address,bytes32,bytes)": {
+        "notice": "Create a new pinned app instance on `_kernel` with identifier `_appId` and initialization payload `_initializePayload`"
+      },
+      "newPinnedAppInstance(bytes32,address)": {
+        "notice": "Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`."
+      },
+      "newPinnedAppInstance(bytes32,address,bytes,bool)": {
+        "notice": "Create a new non-upgradeable instance of `_appId` app linked to the Kernel, setting its code to `_appBase`. `_setDefault ? 'Also sets it as the default app instance.':''`"
+      },
+      "setApp(bytes32,bytes32,address)": {
+        "notice": "Set the resolving address of `_appId` in namespace `_namespace` to `_app`"
+      },
+      "transferToVault(address)": {
+        "notice": "Send funds to recovery Vault. This contract should never receive funds,        but in case it does, this function allows one to recover them."
+      }
+    }
+  }
+}
