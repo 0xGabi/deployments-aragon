@@ -1,4 +1,4 @@
-# Boilerplate for ethereum solidity smart contract development
+# AragonOS deployment scripts
 
 ## INSTALL
 
@@ -6,10 +6,10 @@
 yarn
 ```
 
-## TEST
+## DEPLOY
 
 ```bash
-yarn test
+npx hardhat --network <network> deploy
 ```
 
 ## SCRIPTS
