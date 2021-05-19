@@ -1,0 +1,168 @@
+{
+  "address": "0x3d5e84D0708744f0Af7dd1AD28df6E5FB92473C0",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_subnode",
+          "type": "bytes32"
+        },
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_subnode",
+          "type": "bytes32"
+        },
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_resolver",
+          "type": "address"
+        }
+      ],
+      "name": "registerWithResolver",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rootNode",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_ensAddr",
+          "type": "address"
+        },
+        {
+          "name": "_defaultResolver",
+          "type": "address"
+        },
+        {
+          "name": "_node",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "subnode",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "resolver",
+          "type": "address"
+        }
+      ],
+      "name": "ClaimSubdomain",
+      "type": "event"
+    }
+  ],
+  "transactionHash": "0x776d9d2c480cea88df622e81f0bb890ee4ded68c5647687bbfa254036bdb81ff",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB24b54FE5a3ADcB4cb3B27d31B6C7f7E9F6A73a7",
+    "contractAddress": null,
+    "transactionIndex": 1,
+    "gasUsed": "419627",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000001008000000000000000000000000000000008000000000000000000000000080000000000000000000000000000000800000000000000000000100000000000000000000000002000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000010000000000000000000200000000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000040000100000",
+    "blockHash": "0x9474778430be407220df8b47ee736c21d74ebe4b1dd19472021f1c7b7405bc0f",
+    "transactionHash": "0x776d9d2c480cea88df622e81f0bb890ee4ded68c5647687bbfa254036bdb81ff",
+    "logs": [
+      {
+        "transactionIndex": 1,
+        "blockNumber": 14670330,
+        "transactionHash": "0x776d9d2c480cea88df622e81f0bb890ee4ded68c5647687bbfa254036bdb81ff",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000b24b54fe5a3adcb4cb3b27d31b6c7f7e9f6a73a7",
+          "0x000000000000000000000000b79fad4ca981472442f53d16365fdf0305ffd8e9"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000007743e1f5da600000000000000000000000000000000000000000000000000221b6c88b0e6b800000000000000000000000000000000000000000000000064e2185a03af0dbbc80000000000000000000000000000000000000000000000002213f84a91891200000000000000000000000000000000000000000000000064e21fce41ce6b61c8",
+        "logIndex": 1,
+        "blockHash": "0x9474778430be407220df8b47ee736c21d74ebe4b1dd19472021f1c7b7405bc0f"
+      }
+    ],
+    "blockNumber": 14670330,
+    "cumulativeGasUsed": "467889",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x4E065c622d584Fbe5D9078C3081840155FA69581",
+    "0xaA8777668a2fA3435Afc1EEaF34B09Df05bFc5ee",
+    "0x7e74a86b6e146964fb965db04dc2590516da77f720bb6759337bf5632415fd86"
+  ],
+  "solcInputHash": "ff4c8d322a70f7dfdac93ed09c96ea16",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_subnode\",\"type\":\"bytes32\"},{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"register\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_subnode\",\"type\":\"bytes32\"},{\"name\":\"_owner\",\"type\":\"address\"},{\"name\":\"_resolver\",\"type\":\"address\"}],\"name\":\"registerWithResolver\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rootNode\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_ensAddr\",\"type\":\"address\"},{\"name\":\"_defaultResolver\",\"type\":\"address\"},{\"name\":\"_node\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"subnode\",\"type\":\"bytes32\"},{\"indexed\":true,\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"ClaimSubdomain\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"register(bytes32,address)\":{\"params\":{\"_owner\":\"The address of the new owner.\",\"_subnode\":\"The hash of the label to register.\"}},\"registerWithResolver(bytes32,address,address)\":{\"params\":{\"_owner\":\"The address of the new owner.\",\"_resolver\":\"The address of the resolver.                 If the resolver supports the address interface, the subdomain's address will                 be set to the new owner.\",\"_subnode\":\"The hash of the label to register.\"}}}},\"userdoc\":{\"methods\":{\"register(bytes32,address)\":{\"notice\":\"Register a subdomain with the default resolver if it hasn't been claimed yet.\"},\"registerWithResolver(bytes32,address,address)\":{\"notice\":\"Register a subdomain if it hasn't been claimed yet.\"}}}},\"settings\":{\"compilationTarget\":{\"contracts/id/FIFSResolvingRegistrar.sol\":\"FIFSResolvingRegistrar\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[]},\"sources\":{\"contracts/id/FIFSResolvingRegistrar.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"../lib/ens/AbstractENS.sol\\\";\\nimport \\\"../lib/ens/IPublicResolver.sol\\\";\\nimport \\\"./IFIFSResolvingRegistrar.sol\\\";\\n\\n\\n/**\\n * A registrar that allocates subdomains and sets resolvers to the first person to claim them.\\n *\\n * Adapted from ENS' FIFSRegistrar:\\n *   https://github.com/ethereum/ens/blob/master/contracts/FIFSRegistrar.sol\\n */\\ncontract FIFSResolvingRegistrar is IFIFSResolvingRegistrar {\\n    bytes32 public rootNode;\\n    AbstractENS internal ens;\\n    IPublicResolver internal defaultResolver;\\n\\n    bytes4 private constant ADDR_INTERFACE_ID = 0x3b3b57de;\\n\\n    event ClaimSubdomain(bytes32 indexed subnode, address indexed owner, address indexed resolver);\\n\\n    /**\\n     * Constructor.\\n     * @param _ensAddr The address of the ENS registry.\\n     * @param _defaultResolver The address of the default resolver to use for subdomains.\\n     * @param _node The node that this registrar administers.\\n     */\\n    constructor(AbstractENS _ensAddr, IPublicResolver _defaultResolver, bytes32 _node)\\n        public\\n    {\\n        ens = _ensAddr;\\n        defaultResolver = _defaultResolver;\\n        rootNode = _node;\\n    }\\n\\n    /**\\n     * Register a subdomain with the default resolver if it hasn't been claimed yet.\\n     * @param _subnode The hash of the label to register.\\n     * @param _owner The address of the new owner.\\n     */\\n    function register(bytes32 _subnode, address _owner) external {\\n        registerWithResolver(_subnode, _owner, defaultResolver);\\n    }\\n\\n    /**\\n     * Register a subdomain if it hasn't been claimed yet.\\n     * @param _subnode The hash of the label to register.\\n     * @param _owner The address of the new owner.\\n     * @param _resolver The address of the resolver.\\n     *                  If the resolver supports the address interface, the subdomain's address will\\n     *                  be set to the new owner.\\n     */\\n    function registerWithResolver(bytes32 _subnode, address _owner, IPublicResolver _resolver) public {\\n        bytes32 node = keccak256(rootNode, _subnode);\\n        address currentOwner = ens.owner(node);\\n        require(currentOwner == address(0));\\n\\n        ens.setSubnodeOwner(rootNode, _subnode, address(this));\\n        ens.setResolver(node, _resolver);\\n        if (_resolver.supportsInterface(ADDR_INTERFACE_ID)) {\\n            _resolver.setAddr(node, _owner);\\n        }\\n\\n        // Give ownership to the claimer\\n        ens.setOwner(node, _owner);\\n\\n        emit ClaimSubdomain(_subnode, _owner, address(_resolver));\\n    }\\n}\\n\",\"keccak256\":\"0xf6d9fab880910007e734413f31dce847cdc5a96f9ad497901bea27d50cb1f184\"},\"contracts/id/IFIFSResolvingRegistrar.sol\":{\"content\":\"pragma solidity 0.4.24;\\n\\nimport \\\"../lib/ens/IPublicResolver.sol\\\";\\n\\n\\ninterface IFIFSResolvingRegistrar {\\n    function register(bytes32 _subnode, address _owner) external;\\n    function registerWithResolver(bytes32 _subnode, address _owner, IPublicResolver _resolver) public;\\n}\\n\",\"keccak256\":\"0xee1dc80e0025f499dab9f7a612d549425d1a980011080a52352c620eb3bb7d96\"},\"contracts/lib/ens/AbstractENS.sol\":{\"content\":\"// See https://github.com/ensdomains/ens/blob/7e377df83f/contracts/AbstractENS.sol\\n\\npragma solidity ^0.4.15;\\n\\n\\ninterface AbstractENS {\\n    function owner(bytes32 _node) public constant returns (address);\\n    function resolver(bytes32 _node) public constant returns (address);\\n    function ttl(bytes32 _node) public constant returns (uint64);\\n    function setOwner(bytes32 _node, address _owner) public;\\n    function setSubnodeOwner(bytes32 _node, bytes32 label, address _owner) public;\\n    function setResolver(bytes32 _node, address _resolver) public;\\n    function setTTL(bytes32 _node, uint64 _ttl) public;\\n\\n    // Logged when the owner of a node assigns a new owner to a subnode.\\n    event NewOwner(bytes32 indexed _node, bytes32 indexed _label, address _owner);\\n\\n    // Logged when the owner of a node transfers ownership to a new account.\\n    event Transfer(bytes32 indexed _node, address _owner);\\n\\n    // Logged when the resolver for a node changes.\\n    event NewResolver(bytes32 indexed _node, address _resolver);\\n\\n    // Logged when the TTL of a node changes\\n    event NewTTL(bytes32 indexed _node, uint64 _ttl);\\n}\\n\",\"keccak256\":\"0x8deaa274dfc550c8251576dfa0dde1e58933728ced575de4f5b12391fd358c95\"},\"contracts/lib/ens/IPublicResolver.sol\":{\"content\":\"pragma solidity ^0.4.0;\\n\\n\\ninterface IPublicResolver {\\n    function supportsInterface(bytes4 interfaceID) constant returns (bool);\\n    function addr(bytes32 node) constant returns (address ret);\\n    function setAddr(bytes32 node, address addr);\\n    function hash(bytes32 node) constant returns (bytes32 ret);\\n    function setHash(bytes32 node, bytes32 hash);\\n}\\n\",\"keccak256\":\"0xd3cfaad61764512d8becada0f59d1a9db2a7349df2610e4a77f0fbf49750af03\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516060806105ef83398101604090815281516020830151919092015160018054600160a060020a03948516600160a060020a0319918216179091556002805494909316931692909217905560005561057f806100706000396000f3006080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663d22057a9811461005b578063f858fc0b1461008e578063faff50a8146100c5575b600080fd5b34801561006757600080fd5b5061008c60043573ffffffffffffffffffffffffffffffffffffffff602435166100ec565b005b34801561009a57600080fd5b5061008c60043573ffffffffffffffffffffffffffffffffffffffff60243581169060443516610116565b3480156100d157600080fd5b506100da61054d565b60408051918252519081900360200190f35b600254610112908390839073ffffffffffffffffffffffffffffffffffffffff16610116565b5050565b60008054604080519182526020808301879052815192839003820183206001547f02571be300000000000000000000000000000000000000000000000000000000855260048501829052925190949373ffffffffffffffffffffffffffffffffffffffff909316926302571be392602480830193919282900301818787803b1580156101a157600080fd5b505af11580156101b5573d6000803e3d6000fd5b505050506040513d60208110156101cb57600080fd5b5051905073ffffffffffffffffffffffffffffffffffffffff8116156101f057600080fd5b60015460008054604080517f06ab59230000000000000000000000000000000000000000000000000000000081526004810192909252602482018990523060448301525173ffffffffffffffffffffffffffffffffffffffff909316926306ab59239260648084019391929182900301818387803b15801561027157600080fd5b505af1158015610285573d6000803e3d6000fd5b5050600154604080517f1896f70a0000000000000000000000000000000000000000000000000000000081526004810187905273ffffffffffffffffffffffffffffffffffffffff88811660248301529151919092169350631896f70a9250604480830192600092919082900301818387803b15801561030457600080fd5b505af1158015610318573d6000803e3d6000fd5b5050604080517f01ffc9a70000000000000000000000000000000000000000000000000000000081527f3b3b57de000000000000000000000000000000000000000000000000000000006004820152905173ffffffffffffffffffffffffffffffffffffffff871693506301ffc9a7925060248083019260209291908290030181600087803b1580156103aa57600080fd5b505af11580156103be573d6000803e3d6000fd5b505050506040513d60208110156103d457600080fd5b50511561046c57604080517fd5fa2b000000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff868116602483015291519185169163d5fa2b009160448082019260009290919082900301818387803b15801561045357600080fd5b505af1158015610467573d6000803e3d6000fd5b505050505b600154604080517f5b0fc9c30000000000000000000000000000000000000000000000000000000081526004810185905273ffffffffffffffffffffffffffffffffffffffff878116602483015291519190921691635b0fc9c391604480830192600092919082900301818387803b1580156104e757600080fd5b505af11580156104fb573d6000803e3d6000fd5b505060405173ffffffffffffffffffffffffffffffffffffffff80871693508716915087907fe27a5a369e0d2c5056ccfcbd5f83f145f43350142d42aaf46ff9a9e461d543df90600090a45050505050565b600054815600a165627a7a7230582005c8fd9c67b8bdec5bc8c924c0b45c183fd2f1216b545a869b4078bde1a7246a0029",
+  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663d22057a9811461005b578063f858fc0b1461008e578063faff50a8146100c5575b600080fd5b34801561006757600080fd5b5061008c60043573ffffffffffffffffffffffffffffffffffffffff602435166100ec565b005b34801561009a57600080fd5b5061008c60043573ffffffffffffffffffffffffffffffffffffffff60243581169060443516610116565b3480156100d157600080fd5b506100da61054d565b60408051918252519081900360200190f35b600254610112908390839073ffffffffffffffffffffffffffffffffffffffff16610116565b5050565b60008054604080519182526020808301879052815192839003820183206001547f02571be300000000000000000000000000000000000000000000000000000000855260048501829052925190949373ffffffffffffffffffffffffffffffffffffffff909316926302571be392602480830193919282900301818787803b1580156101a157600080fd5b505af11580156101b5573d6000803e3d6000fd5b505050506040513d60208110156101cb57600080fd5b5051905073ffffffffffffffffffffffffffffffffffffffff8116156101f057600080fd5b60015460008054604080517f06ab59230000000000000000000000000000000000000000000000000000000081526004810192909252602482018990523060448301525173ffffffffffffffffffffffffffffffffffffffff909316926306ab59239260648084019391929182900301818387803b15801561027157600080fd5b505af1158015610285573d6000803e3d6000fd5b5050600154604080517f1896f70a0000000000000000000000000000000000000000000000000000000081526004810187905273ffffffffffffffffffffffffffffffffffffffff88811660248301529151919092169350631896f70a9250604480830192600092919082900301818387803b15801561030457600080fd5b505af1158015610318573d6000803e3d6000fd5b5050604080517f01ffc9a70000000000000000000000000000000000000000000000000000000081527f3b3b57de000000000000000000000000000000000000000000000000000000006004820152905173ffffffffffffffffffffffffffffffffffffffff871693506301ffc9a7925060248083019260209291908290030181600087803b1580156103aa57600080fd5b505af11580156103be573d6000803e3d6000fd5b505050506040513d60208110156103d457600080fd5b50511561046c57604080517fd5fa2b000000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff868116602483015291519185169163d5fa2b009160448082019260009290919082900301818387803b15801561045357600080fd5b505af1158015610467573d6000803e3d6000fd5b505050505b600154604080517f5b0fc9c30000000000000000000000000000000000000000000000000000000081526004810185905273ffffffffffffffffffffffffffffffffffffffff878116602483015291519190921691635b0fc9c391604480830192600092919082900301818387803b1580156104e757600080fd5b505af11580156104fb573d6000803e3d6000fd5b505060405173ffffffffffffffffffffffffffffffffffffffff80871693508716915087907fe27a5a369e0d2c5056ccfcbd5f83f145f43350142d42aaf46ff9a9e461d543df90600090a45050505050565b600054815600a165627a7a7230582005c8fd9c67b8bdec5bc8c924c0b45c183fd2f1216b545a869b4078bde1a7246a0029",
+  "devdoc": {
+    "methods": {
+      "register(bytes32,address)": {
+        "params": {
+          "_owner": "The address of the new owner.",
+          "_subnode": "The hash of the label to register."
+        }
+      },
+      "registerWithResolver(bytes32,address,address)": {
+        "params": {
+          "_owner": "The address of the new owner.",
+          "_resolver": "The address of the resolver.                 If the resolver supports the address interface, the subdomain's address will                 be set to the new owner.",
+          "_subnode": "The hash of the label to register."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "register(bytes32,address)": {
+        "notice": "Register a subdomain with the default resolver if it hasn't been claimed yet."
+      },
+      "registerWithResolver(bytes32,address,address)": {
+        "notice": "Register a subdomain if it hasn't been claimed yet."
+      }
+    }
+  }
+}

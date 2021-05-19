@@ -1,6 +1,6 @@
 {
-  "name": "template-ethereum-contracts",
-  "version": "0.1.0",
+  "name": "@1hive/deployments-aragon-os",
+  "version": "1.0.0",
   "description": "Template to develop ethereum smart contracts",
   "engines": {
     "node": ">= 12.18.0"
@@ -16,6 +16,7 @@
     "hardhat",
     "solidity"
   ],
+  "files": ["artifacts", "contracts", "deploy", "deployments"],
   "resolutions": {
     "websocket": "1.0.32"
   },
