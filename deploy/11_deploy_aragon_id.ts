@@ -36,7 +36,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('Assigning owner name');
   await execute(
     'FIFSResolvingRegistrar',
-    {from: deployer, log: true},
+    {from: deployer, log: true, gasLimit: 8000000},
     'register',
     ownerHash,
     deployer

@@ -1,6 +1,6 @@
 {
-  "name": "template-ethereum-contracts",
-  "version": "0.1.0",
+  "name": "@1hive/deployments-aragon-os",
+  "version": "1.0.0",
   "description": "Template to develop ethereum smart contracts",
   "engines": {
     "node": ">= 12.18.0"
@@ -16,16 +16,11 @@
     "hardhat",
     "solidity"
   ],
+  "files": ["artifacts", "contracts", "deploy", "deployments"],
   "resolutions": {
     "websocket": "1.0.32"
   },
   "devDependencies": {
-    "@aragon/apps-agent": "^2.1.0",
-    "@aragon/apps-finance": "^3.0.0",
-    "@aragon/apps-payroll": "^1.0.0",
-    "@aragon/apps-token-manager": "^2.1.0",
-    "@aragon/apps-vault": "^4.1.0",
-    "@aragon/apps-voting": "^2.1.0",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
     "@openzeppelin/contracts": "^3.4.1",
     "@tenderly/hardhat-tenderly": "^1.0.12",
