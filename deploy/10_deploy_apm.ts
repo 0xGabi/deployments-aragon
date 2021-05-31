@@ -34,7 +34,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // New APM instance
   const {events} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 8000000},
+    {from: deployer, log: true},
     'newAPM',
     tldHash,
     labelHash,
@@ -70,14 +70,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   );
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
-  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
-    gasLimit: 8000000,
-  });
+  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address);
 
   // New Open APM instance
   const {events: newApmEvents} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 8000000},
+    {from: deployer, log: true},
     'newAPM',
     openTldHash,
     openLabelHash,

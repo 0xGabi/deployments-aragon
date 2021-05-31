@@ -40,7 +40,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       ethers.constants.AddressZero,
     ],
     log: true,
-    deterministicDeployment: true,
   });
 
   if (process.env.VERIFY) {
