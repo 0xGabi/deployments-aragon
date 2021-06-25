@@ -79,6 +79,11 @@ const config: HardhatUserConfig = {
       accounts: accounts('arbitrum'),
       gasPrice: 0,
     },
+    arbtest: {
+      url: node_url('arbtest'),
+      accounts: accounts('arbtest'),
+      gasPrice: 0,
+    },
     frame: {
       url: 'http://localhost:1248',
       httpHeaders: {origin: 'hardhat'},
