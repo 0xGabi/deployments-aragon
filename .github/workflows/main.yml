@@ -34,5 +34,3 @@ jobs:
       - name: Formatting
         run: yarn format
 
-      - name: Running tests
-        run: yarn test
