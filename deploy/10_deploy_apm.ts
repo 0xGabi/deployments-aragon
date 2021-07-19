@@ -24,6 +24,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const openTldHash = ethers.utils.namehash(openTldName);
   const openLabelHash = ethers.utils.id(openLabelName);
 
+  const ANY_ENTITY = '0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF';
+  const CREATE_REPO_ROLE = ethers.utils.id('CREATE_REPO_ROLE');
+
   const apmFactory = await get('APMRegistryFactory');
   const ensAddress = await read('APMRegistryFactory', {from: deployer}, 'ens');
 
@@ -86,6 +89,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     (event) => event.event == 'DeployAPM'
   ).args;
   log('Open APM:', openApmAddress);
+
+  // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
+  await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
 
   if (process.env.VERIFY) {
     await hre.tenderly.persistArtifacts(
