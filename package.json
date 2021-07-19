@@ -16,7 +16,12 @@
     "hardhat",
     "solidity"
   ],
-  "files": ["artifacts", "contracts", "deploy", "deployments"],
+  "files": [
+    "artifacts",
+    "contracts",
+    "deploy",
+    "deployments"
+  ],
   "resolutions": {
     "websocket": "1.0.32"
   },
@@ -40,7 +45,7 @@
     "ethers": "^5.1.0",
     "fs-extra": "^9.0.1",
     "hardhat": "^2.0.10",
-    "hardhat-deploy": "^0.7.4",
+    "hardhat-deploy": "^0.8.11",
     "hardhat-gas-reporter": "^1.0.4",
     "mocha": "^8.1.1",
     "prettier": "^2.0.5",

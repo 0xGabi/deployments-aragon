@@ -90,7 +90,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   ).args;
   log('Open APM:', openApmAddress);
 
-  // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
+  log('Grant ANY_ADDRESS the CREATE_REPO_ROLE permission');
   await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
 
   if (process.env.VERIFY) {
