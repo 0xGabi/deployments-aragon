@@ -21,7 +21,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         : evmScriptRegistryFactory.address,
     ],
     log: true,
-    deterministicDeployment: true,
   });
 
   if (process.env.VERIFY) {

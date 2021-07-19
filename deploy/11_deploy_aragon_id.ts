@@ -27,7 +27,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     from: deployer,
     args: [ensAddress, publicResolver, node],
     log: true,
-    deterministicDeployment: true,
   });
 
   log('Creating subdomain and assigning it to AragonID');
@@ -36,7 +35,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('Assigning owner name');
   await execute(
     'FIFSResolvingRegistrar',
-    {from: deployer, log: true, gasLimit: 8000000},
+    {from: deployer, log: true},
     'register',
     ownerHash,
     deployer

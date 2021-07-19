@@ -24,6 +24,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const openTldHash = ethers.utils.namehash(openTldName);
   const openLabelHash = ethers.utils.id(openLabelName);
 
+  const ANY_ENTITY = '0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF';
+  const CREATE_REPO_ROLE = ethers.utils.id('CREATE_REPO_ROLE');
+
   const apmFactory = await get('APMRegistryFactory');
   const ensAddress = await read('APMRegistryFactory', {from: deployer}, 'ens');
 
@@ -34,7 +37,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // New APM instance
   const {events} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 8000000},
+    {from: deployer, log: true},
     'newAPM',
     tldHash,
     labelHash,
@@ -70,14 +73,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   );
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
-  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
-    gasLimit: 8000000,
-  });
+  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address);
 
   // New Open APM instance
   const {events: newApmEvents} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true, gasLimit: 8000000},
+    {from: deployer, log: true},
     'newAPM',
     openTldHash,
     openLabelHash,
@@ -88,6 +89,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     (event) => event.event == 'DeployAPM'
   ).args;
   log('Open APM:', openApmAddress);
+
+  // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
+  await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
 
   if (process.env.VERIFY) {
     await hre.tenderly.persistArtifacts(
