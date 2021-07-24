@@ -16,7 +16,13 @@
     "hardhat",
     "solidity"
   ],
-  "files": ["artifacts", "contracts", "deploy", "deployments"],
+  "files": [
+    "/artifacts/contracts/**/*.json",
+    "!/artifacts/contracts/**/*.dbg.json",
+    "contracts",
+    "deploy",
+    "deployments"
+  ],
   "resolutions": {
     "websocket": "1.0.32"
   },
