@@ -74,6 +74,10 @@ const config: HardhatUserConfig = {
       url: node_url('polygon'),
       accounts: accounts('polygon'),
     },
+    mumbai: {
+      url: node_url('mumbai'),
+      accounts: accounts('mumbai'),
+    },
     arbitrum: {
       url: node_url('arbitrum'),
       accounts: accounts('arbitrum'),
@@ -87,6 +91,7 @@ const config: HardhatUserConfig = {
     frame: {
       url: 'http://localhost:1248',
       httpHeaders: {origin: 'hardhat'},
+      timeout: 0,
     },
   },
   gasReporter: {

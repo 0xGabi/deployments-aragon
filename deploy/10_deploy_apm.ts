@@ -73,7 +73,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   );
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
-  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address);
+  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
+    gasLimit: 300000,
+  });
 
   // New Open APM instance
   const {events: newApmEvents} = await execute(
@@ -91,7 +93,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('Open APM:', openApmAddress);
 
   // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
-  await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
+  log('Create permission for ANY_ENTITY on CREATE_REPO_ROLE');
+  await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE, {
+    gasLimit: 500000,
+  });
 
   if (process.env.VERIFY) {
     await hre.tenderly.persistArtifacts(
