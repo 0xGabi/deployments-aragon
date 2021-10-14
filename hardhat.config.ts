@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import {HardhatUserConfig} from 'hardhat/types';
+import {task} from 'hardhat/config';
 
 import '@nomiclabs/hardhat-ethers';
 import '@tenderly/hardhat-tenderly';
@@ -9,6 +10,8 @@ import 'hardhat-gas-reporter';
 import 'solidity-coverage';
 
 import {node_url, accounts} from './utils/network';
+
+import {APMRegistry, Kernel} from './typechain';
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -121,3 +124,18 @@ const config: HardhatUserConfig = {
 };
 
 export default config;
+
+task('apm', 'Get APM DAO address')
+  .addParam('apm', 'The APM Registry address')
+  .setAction(async ({apm: apmAddress}, {ethers}) => {
+    const apm = (await ethers.getContractAt(
+      'APMRegistry',
+      apmAddress
+    )) as APMRegistry;
+    const kernel = (await ethers.getContractAt(
+      'Kernel',
+      await apm.kernel()
+    )) as Kernel;
+
+    console.log(kernel.address);
+  });
