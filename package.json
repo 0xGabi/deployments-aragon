@@ -1,6 +1,6 @@
 {
   "name": "@1hive/deployments-aragon-os",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Template to develop ethereum smart contracts",
   "engines": {
     "node": ">= 12.18.0"
