@@ -32,7 +32,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   log('Creating subdomain and assigning it to APMRegistryFactory');
   const ens = (await ethers.getContractAt('ENS', ensAddress)) as ENS;
-  await ens.setSubnodeOwner(tldHash, labelHash, apmFactory.address);
+  await ens.setSubnodeOwner(tldHash, labelHash, apmFactory.address, {
+    gasLimit: 700000,
+  });
 
   // New APM instance
   const {events} = await execute(
@@ -73,7 +75,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   );
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
-  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address);
+  await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
+    gasLimit: 700000,
+  });
 
   // New Open APM instance
   const {events: newApmEvents} = await execute(
@@ -90,8 +94,29 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   ).args;
   log('Open APM:', openApmAddress);
 
+  const apmOpen = (await ethers.getContractAt(
+    'APMRegistry',
+    openApmAddress
+  )) as APMRegistry;
+  const kernelApmOpen = (await ethers.getContractAt(
+    'Kernel',
+    await apmOpen.kernel()
+  )) as Kernel;
+  const aclApmOpen = (await ethers.getContractAt(
+    'ACL',
+    await kernelApmOpen.acl()
+  )) as ACL;
+
   // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
-  await acl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
+  log('Create permission for ANY_ENTITY on CREATE_REPO_ROLE');
+  await aclApmOpen.grantPermission(
+    ANY_ENTITY,
+    openApmAddress,
+    CREATE_REPO_ROLE,
+    {
+      gasLimit: 500000,
+    }
+  );
 
   if (process.env.VERIFY) {
     await hre.tenderly.persistArtifacts(
