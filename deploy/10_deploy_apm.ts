@@ -32,7 +32,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   log('Creating subdomain and assigning it to APMRegistryFactory');
   const ens = (await ethers.getContractAt('ENS', ensAddress)) as ENS;
-  await ens.setSubnodeOwner(tldHash, labelHash, apmFactory.address);
+  await ens.setSubnodeOwner(tldHash, labelHash, apmFactory.address, {
+    gasLimit: 700000,
+  });
 
   // New APM instance
   const {events} = await execute(
@@ -74,7 +76,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
   await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
-    gasLimit: 300000,
+    gasLimit: 700000,
   });
 
   // New Open APM instance
@@ -93,8 +95,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('Open APM:', openApmAddress);
 
   const apmOpen = (await ethers.getContractAt(
-    'openApmAddress',
-    apmAddress
+    'APMRegistry',
+    openApmAddress
   )) as APMRegistry;
   const kernelApmOpen = (await ethers.getContractAt(
     'Kernel',
