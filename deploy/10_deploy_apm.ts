@@ -93,6 +93,18 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     (event) => event.event == 'DeployAPM'
   ).args;
   log('Open APM:', openApmAddress);
+  const openApm = (await ethers.getContractAt(
+    'APMRegistry',
+    openApmAddress
+  )) as APMRegistry;
+  const openKernel = (await ethers.getContractAt(
+    'Kernel',
+    await openApm.kernel()
+  )) as Kernel;
+  const openAcl = (await ethers.getContractAt(
+    'ACL',
+    await openKernel.acl()
+  )) as ACL;
 
   const apmOpen = (await ethers.getContractAt(
     'APMRegistry',
@@ -117,6 +129,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       gasLimit: 500000,
     }
   );
+  log('Grant ANY_ADDRESS the CREATE_REPO_ROLE permission');
+  await openAcl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
 
   if (process.env.VERIFY) {
     await hre.tenderly.persistArtifacts(
