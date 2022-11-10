@@ -11,7 +11,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const aclBase = await get('ACL');
   const evmScriptRegistryFactory = await get('EVMScriptRegistryFactory');
 
-  const daoFactory = await deploy('DAOFactory', {
+  await deploy('DAOFactory', {
     from: deployer,
     args: [
       kernelBase.address,
@@ -22,18 +22,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     ],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'DAOFactory',
-      address: daoFactory.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'DAOFactory',
-      address: daoFactory.address,
-    });
-  }
 };
 
 export default func;

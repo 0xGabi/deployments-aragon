@@ -7,23 +7,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const {deployer} = await getNamedAccounts();
 
-  const evmScriptRegsitryFactory = await deploy('EVMScriptRegistryFactory', {
+  await deploy('EVMScriptRegistryFactory', {
     from: deployer,
     args: [],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'EVMScriptRegistryFactory',
-      address: evmScriptRegsitryFactory.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'EVMScriptRegistryFactory',
-      address: evmScriptRegsitryFactory.address,
-    });
-  }
 };
 
 export default func;

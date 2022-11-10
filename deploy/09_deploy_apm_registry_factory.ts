@@ -29,7 +29,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('ENS:', ensAddress);
 
   // Deploy APMRegistryFactory
-  const apmFactory = await deploy('APMRegistryFactory', {
+  await deploy('APMRegistryFactory', {
     from: deployer,
     args: [
       daoFactory.address,
@@ -41,30 +41,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     ],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts(
-      {
-        name: 'ENS',
-        address: ensAddress,
-      },
-      {
-        name: 'APMRegistryFactory',
-        address: apmFactory.address,
-      }
-    );
-
-    await hre.tenderly.verify(
-      {
-        name: 'ENS',
-        address: ensAddress,
-      },
-      {
-        name: 'APMRegistryFactory',
-        address: apmFactory.address,
-      }
-    );
-  }
 };
 
 export default func;

@@ -3,9 +3,9 @@ import {HardhatUserConfig} from 'hardhat/types';
 import {task} from 'hardhat/config';
 
 import '@nomiclabs/hardhat-ethers';
-import '@tenderly/hardhat-tenderly';
 import '@typechain/hardhat';
 import 'hardhat-deploy';
+import "hardhat-deploy-tenderly";
 import 'hardhat-gas-reporter';
 import 'solidity-coverage';
 
@@ -21,7 +21,7 @@ const config: HardhatUserConfig = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 10000,
+            runs: 1000,
           },
         },
       },
@@ -89,7 +89,6 @@ const config: HardhatUserConfig = {
     arbtest: {
       url: node_url('arbtest'),
       accounts: accounts('arbtest'),
-      gasPrice: 0,
     },
     frame: {
       url: 'http://localhost:1248',
