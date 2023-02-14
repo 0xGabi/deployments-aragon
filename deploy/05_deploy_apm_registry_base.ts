@@ -7,23 +7,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const {deployer} = await getNamedAccounts();
 
-  const apmRegistryBase = await deploy('APMRegistry', {
+  await deploy('APMRegistry', {
     from: deployer,
     args: [],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'APMRegistry',
-      address: apmRegistryBase.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'APMRegistry',
-      address: apmRegistryBase.address,
-    });
-  }
 };
 
 export default func;

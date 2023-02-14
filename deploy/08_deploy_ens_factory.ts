@@ -7,23 +7,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const {deployer} = await getNamedAccounts();
 
-  const ensFactory = await deploy('ENSFactory', {
+  await deploy('ENSFactory', {
     from: deployer,
     args: [],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'ENSFactory',
-      address: ensFactory.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'ENSFactory',
-      address: ensFactory.address,
-    });
-  }
 };
 
 export default func;

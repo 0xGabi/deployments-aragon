@@ -7,23 +7,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const {deployer} = await getNamedAccounts();
 
-  const ensSubdomainRegistrarBase = await deploy('ENSSubdomainRegistrar', {
+  await deploy('ENSSubdomainRegistrar', {
     from: deployer,
     args: [],
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'ENSSubdomainRegistrar',
-      address: ensSubdomainRegistrarBase.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'ENSSubdomainRegistrar',
-      address: ensSubdomainRegistrarBase.address,
-    });
-  }
 };
 
 export default func;

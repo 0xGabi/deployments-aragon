@@ -39,11 +39,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // New APM instance
   const {events} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true},
+    {from: deployer, log: true, gasLimit: 9000000},
     'newAPM',
     tldHash,
     labelHash,
-    deployer
+    deployer,
   );
 
   const {apm: apmAddress} = events?.find(
@@ -82,11 +82,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // New Open APM instance
   const {events: newApmEvents} = await execute(
     'APMRegistryFactory',
-    {from: deployer, log: true},
+    {from: deployer, log: true, gasLimit: 9000000},
     'newAPM',
     openTldHash,
     openLabelHash,
-    deployer
+    deployer,
   );
 
   const {apm: openApmAddress} = newApmEvents?.find(
@@ -131,30 +131,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   );
   log('Grant ANY_ADDRESS the CREATE_REPO_ROLE permission');
   await openAcl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts(
-      {
-        name: 'APMRegistry',
-        address: apmAddress,
-      },
-      {
-        name: 'APMRegistry',
-        address: openApmAddress,
-      }
-    );
-
-    await hre.tenderly.verify(
-      {
-        name: 'APMRegistry',
-        address: apmAddress,
-      },
-      {
-        name: 'APMRegistry',
-        address: openApmAddress,
-      }
-    );
-  }
 };
 
 export default func;

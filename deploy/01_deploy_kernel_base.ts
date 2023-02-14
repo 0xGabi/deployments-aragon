@@ -7,23 +7,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const {deployer} = await getNamedAccounts();
 
-  const kernelBase = await deploy('Kernel', {
+  await deploy('Kernel', {
     from: deployer,
     args: [true], // immediately petrify
     log: true,
   });
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'Kernel',
-      address: kernelBase.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'Kernel',
-      address: kernelBase.address,
-    });
-  }
 };
 
 export default func;

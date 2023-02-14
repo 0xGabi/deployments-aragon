@@ -35,23 +35,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   log('Assigning owner name');
   await execute(
     'FIFSResolvingRegistrar',
-    {from: deployer, log: true, gasLimit: 500000},
+    {from: deployer, log: true, gasLimit: 5000000},
     'register',
     ownerHash,
     deployer
   );
-
-  if (process.env.VERIFY) {
-    await hre.tenderly.persistArtifacts({
-      name: 'FIFSResolvingRegistrar',
-      address: aragonID.address,
-    });
-
-    await hre.tenderly.verify({
-      name: 'FIFSResolvingRegistrar',
-      address: aragonID.address,
-    });
-  }
 };
 
 export default func;
