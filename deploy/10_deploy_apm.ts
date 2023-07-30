@@ -43,7 +43,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     'newAPM',
     tldHash,
     labelHash,
-    deployer,
+    deployer
   );
 
   const {apm: apmAddress} = events?.find(
@@ -55,24 +55,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     'APMRegistry',
     apmAddress
   )) as APMRegistry;
-  const kernel = (await ethers.getContractAt(
-    'Kernel',
-    await apm.kernel()
-  )) as Kernel;
-  const acl = (await ethers.getContractAt('ACL', await kernel.acl())) as ACL;
 
   const registrar = await apm.registrar();
   const ensSubdomainRegistrar = (await ethers.getContractAt(
     'ENSSubdomainRegistrar',
     registrar
   )) as ENSSubdomainRegistrar;
-
-  log('Create permission for root account on CREATE_NAME_ROLE');
-  await acl.grantPermission(
-    deployer,
-    registrar,
-    await ensSubdomainRegistrar.CREATE_NAME_ROLE()
-  );
 
   log('Creating open subdomain and assigning it to APMRegistryFactory');
   await ensSubdomainRegistrar.createName(openLabelHash, apmFactory.address, {
@@ -86,13 +74,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     'newAPM',
     openTldHash,
     openLabelHash,
-    deployer,
+    deployer
   );
 
   const {apm: openApmAddress} = newApmEvents?.find(
     (event) => event.event == 'DeployAPM'
   ).args;
   log('Open APM:', openApmAddress);
+
   const openApm = (await ethers.getContractAt(
     'APMRegistry',
     openApmAddress
@@ -106,31 +95,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     await openKernel.acl()
   )) as ACL;
 
-  const apmOpen = (await ethers.getContractAt(
-    'APMRegistry',
-    openApmAddress
-  )) as APMRegistry;
-  const kernelApmOpen = (await ethers.getContractAt(
-    'Kernel',
-    await apmOpen.kernel()
-  )) as Kernel;
-  const aclApmOpen = (await ethers.getContractAt(
-    'ACL',
-    await kernelApmOpen.acl()
-  )) as ACL;
-
   // Grant ANY_ADDRESS the CREATE_REPO_ROLE permission
   log('Create permission for ANY_ENTITY on CREATE_REPO_ROLE');
-  await aclApmOpen.grantPermission(
-    ANY_ENTITY,
-    openApmAddress,
-    CREATE_REPO_ROLE,
-    {
-      gasLimit: 500000,
-    }
-  );
-  log('Grant ANY_ADDRESS the CREATE_REPO_ROLE permission');
-  await openAcl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE);
+  await openAcl.grantPermission(ANY_ENTITY, openApmAddress, CREATE_REPO_ROLE, {
+    gasLimit: 500000,
+  });
 };
 
 export default func;
